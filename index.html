@@ -4,21 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gunadi Naga Wijaya - Data Analyst Portfolio</title>
+    <!-- Import Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Import Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* General Body Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Raleway', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
-            padding: 20px 0;
+            padding: 50px 0;
             text-align: center;
+            background-image: url('https://source.unsplash.com/1600x900/?technology,data');
+            background-size: cover;
+            background-position: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            font-weight: 600;
         }
         nav {
-            background-color: #444;
+            background-color: #333;
             overflow: hidden;
         }
         nav a {
@@ -28,6 +46,7 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            font-weight: 600;
         }
         nav a:hover {
             background-color: #ddd;
@@ -35,9 +54,15 @@
         }
         section {
             padding: 20px;
-            margin: 20px;
+            margin: 20px auto;
             background-color: white;
             border-radius: 8px;
+            max-width: 900px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
         }
         footer {
             background-color: #333;
@@ -47,14 +72,50 @@
             margin-top: 20px;
         }
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
         }
         .project-card {
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             border-radius: 8px;
             padding: 20px;
+            margin: 20px 0;
+            border-left: 6px solid #4CAF50;
+        }
+        .project-card h3 {
+            margin: 0;
+        }
+        .project-card p {
+            color: #555;
+        }
+        .skills-list, .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li, .contact-info li {
             margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .skills-list i, .contact-info i {
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+        .contact-info a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: 600;
+        }
+        .contact-info a:hover {
+            color: #333;
+        }
+        /* Add Hover Effects */
+        nav a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .project-card:hover {
+            border-left: 6px solid #333;
+            background-color: #fff;
         }
     </style>
 </head>
@@ -75,26 +136,26 @@
 <div class="container">
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi, I'm Gunadi Naga Wijaya, a passionate data analyst with experience in customer segmentation, predictive modeling, and data visualization. I use tools like Python, Pandas, Scikit-learn, and Matplotlib to uncover insights from data.</p>
+        <p>Hi, I'm Gunadi Naga Wijaya, a passionate data analyst with experience in customer segmentation, predictive modeling, and data visualization. I use tools like Python, Pandas, Scikit-learn, and Matplotlib to uncover insights from data. My goal is to leverage data to solve real-world business problems and provide actionable insights.</p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
 
         <div class="project-card">
-            <h3>Customer Segmentation for E-commerce</h3>
+            <h3><i class="fas fa-chart-pie"></i> Customer Segmentation for E-commerce</h3>
             <p>Developed a customer segmentation model using K-means clustering for an e-commerce business, which helped enhance customer engagement and retention.</p>
             <a href="#">View Project</a>
         </div>
 
         <div class="project-card">
-            <h3>Predictive Maintenance Model</h3>
+            <h3><i class="fas fa-wrench"></i> Predictive Maintenance Model</h3>
             <p>Built a predictive maintenance model that forecasts potential failures in machinery, using time-series data analysis and machine learning techniques.</p>
             <a href="#">View Project</a>
         </div>
 
         <div class="project-card">
-            <h3>Interactive Sales Dashboard</h3>
+            <h3><i class="fas fa-chart-line"></i> Interactive Sales Dashboard</h3>
             <p>Created an interactive dashboard using Python and Tableau to monitor and analyze sales performance across different regions and products.</p>
             <a href="#">View Project</a>
         </div>
@@ -102,19 +163,21 @@
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Python, Pandas, Numpy</li>
-            <li>Scikit-learn, K-means, Random Forest</li>
-            <li>Data Visualization: Matplotlib, Seaborn</li>
-            <li>SQL, Excel, Tableau</li>
+        <ul class="skills-list">
+            <li><i class="fas fa-code"></i> Python, Pandas, Numpy</li>
+            <li><i class="fas fa-project-diagram"></i> Scikit-learn, K-means, Random Forest</li>
+            <li><i class="fas fa-chart-bar"></i> Data Visualization: Matplotlib, Seaborn</li>
+            <li><i class="fas fa-database"></i> SQL, Excel, Tableau</li>
         </ul>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: gunadinagawijaya@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/gunadi-naga-wijaya-432226151" target="_blank">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/Ryuukz" target="_blank">GitHub Profile</a></p>
+        <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> Email: <a href="mailto:gunadinagawijaya@gmail.com">gunadinagawijaya@gmail.com</a></li>
+            <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/gunadi-naga-wijaya-432226151" target="_blank">LinkedIn Profile</a></li>
+            <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Ryuukz" target="_blank">GitHub Profile</a></li>
+        </ul>
     </section>
 </div>
 
