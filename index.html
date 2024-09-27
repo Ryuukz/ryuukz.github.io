@@ -17,8 +17,8 @@
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #edf6f9;
-            color: #333;
+            background-color: #1D1D1D;
+            color: #FFFFFF;
             line-height: 1.6;
         }
         h1, h2, h3, h4 {
@@ -32,7 +32,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?data,technology') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/1600x900/?data,analytics') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -47,17 +47,20 @@
         .hero p {
             font-size: 1.5em;
             margin-bottom: 40px;
+            color: #F4A261; /* Using the yellowish-orange color */
         }
         .hero a {
-            background-color: #005f73;
+            background-color: #F4A261;
             padding: 15px 30px;
-            color: white;
+            color: black;
             border-radius: 30px;
             font-size: 1.2em;
             transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .hero a:hover {
-            background-color: #0a9396;
+            background-color: #E76F51; /* Darker yellowish-orange for hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* Navigation Bar */
@@ -72,11 +75,11 @@
         }
         nav a {
             margin: 0 15px;
-            color: white;
+            color: #F4A261;
             font-weight: 600;
         }
         nav a:hover {
-            color: #0a9396;
+            color: #E76F51;
         }
 
         /* Section Styling */
@@ -87,7 +90,7 @@
         }
         section h2 {
             font-size: 2.5em;
-            color: #333;
+            color: #FFFFFF;
             margin-bottom: 20px;
             position: relative;
         }
@@ -95,7 +98,7 @@
             content: '';
             width: 60px;
             height: 4px;
-            background-color: #005f73;
+            background-color: #F4A261;
             display: block;
             margin: 10px auto;
         }
@@ -103,7 +106,7 @@
             max-width: 700px;
             margin: auto;
             font-size: 1.2em;
-            color: #666;
+            color: #E0E0E0;
         }
 
         /* Projects Section */
@@ -113,7 +116,7 @@
             flex-wrap: wrap;
         }
         .project-card {
-            background-color: white;
+            background-color: #333;
             border-radius: 15px;
             padding: 20px;
             margin: 20px;
@@ -126,19 +129,19 @@
         }
         .project-card h3 {
             font-size: 1.6em;
-            color: #333;
+            color: #FFFFFF;
         }
         .project-card p {
-            color: #666;
+            color: #E0E0E0;
             margin: 10px 0;
         }
         .project-card a {
-            color: #005f73;
+            color: #F4A261;
             font-weight: bold;
             transition: color 0.3s ease;
         }
         .project-card a:hover {
-            color: #0a9396;
+            color: #E76F51;
         }
 
         /* Skills Section */
@@ -148,16 +151,21 @@
             flex-wrap: wrap;
         }
         .skills-list li {
-            background-color: white;
+            background-color: #333;
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
             width: 250px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease;
+            text-align: left;
         }
         .skills-list li:hover {
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .skills-list i {
+            color: #F4A261;
+            margin-right: 10px;
         }
 
         /* Contact Section */
@@ -171,12 +179,12 @@
             font-size: 1.2em;
         }
         .contact-info a {
-            color: #005f73;
+            color: #F4A261;
         }
 
         /* Footer */
         footer {
-            background-color: #333;
+            background-color: #1D1D1D;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -190,50 +198,50 @@
 <section class="hero">
     <div>
         <h1>Gunadi Naga Wijaya</h1>
-        <p>Detail-oriented Data Analyst | Machine Learning Enthusiast | Visualization Expert</p>
-        <a href="#projects">See My Work</a>
+        <p>Hi! I'm a data enthusiast helping businesses leverage the power of data. Ready to explore?</p>
+        <a href="#projects">Explore My Projects</a>
     </div>
 </section>
 
 <!-- Navigation -->
 <nav>
-    <a href="#about">About</a>
+    <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <a href="#contact">Let's Connect</a>
 </nav>
 
 <!-- About Section -->
 <section id="about">
     <h2>About Me</h2>
-    <p>I'm a passionate Data Analyst with expertise in turning data into actionable insights. With skills in Python, machine learning, and data visualization, I help businesses make data-driven decisions that improve outcomes. Explore my projects and experience the impact of data analytics.</p>
+    <p>I’m Gunadi, a detail-oriented Data Analyst focused on transforming raw data into actionable insights. My experience spans across various industries, where I have helped businesses make smarter, data-driven decisions. Want to know more about my work? Scroll down!</p>
 </section>
 
 <!-- Projects Section -->
 <section id="projects">
-    <h2>Projects</h2>
+    <h2>My Projects</h2>
     <div class="projects">
         <div class="project-card">
             <h3>Customer Segmentation Model</h3>
-            <p>Used K-means clustering to identify key customer groups for an e-commerce business, resulting in better-targeted marketing strategies.</p>
-            <a href="#">Learn More</a>
+            <p>Built a model to segment customers using K-means clustering, resulting in personalized marketing strategies that boosted engagement.</p>
+            <a href="#">Take a Look</a>
         </div>
         <div class="project-card">
-            <h3>Predictive Maintenance</h3>
-            <p>Built a machine learning model to predict machinery failure, helping reduce downtime by 15% in a manufacturing facility.</p>
-            <a href="#">Learn More</a>
+            <h3>Predictive Maintenance Model</h3>
+            <p>Developed a machine learning model that predicts sales with targeted marketing strategies, increasing sales growth by 20%.</p>
+            <a href="#">Check It Out</a>
         </div>
         <div class="project-card">
-            <h3>Sales Dashboard</h3>
-            <p>Developed an interactive sales dashboard using PowerBI to visualize key sales performance metrics for various regions.</p>
-            <a href="#">Learn More</a>
+            <h3>Interactive Sales Dashboard</h3>
+            <p>Created a dynamic PowerBI dashboard that allows sales teams to track and analyze performance metrics in real time.</p>
+            <a href="#">View the Dashboard</a>
         </div>
     </div>
 </section>
 
 <!-- Skills Section -->
 <section id="skills">
-    <h2>Skills</h2>
+    <h2>What I Do Best</h2>
     <ul class="skills-list">
         <li><i class="fas fa-code"></i> Python, Pandas, Numpy</li>
         <li><i class="fas fa-brain"></i> Machine Learning (Scikit-learn)</li>
@@ -244,10 +252,11 @@
 
 <!-- Contact Section -->
 <section id="contact">
-    <h2>Contact</h2>
+    <h2>Let's Connect!</h2>
+    <p>Interested in collaborating or want to know more about my work? Feel free to reach out. I'd love to chat!</p>
     <ul class="contact-info">
         <li><i class="fas fa-envelope"></i> Email: <a href="mailto:gunadinagawijaya@gmail.com">gunadinagawijaya@gmail.com</a></li>
-        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/gunadi-naga-wijaya-432226151" target="_blank">linkedin.com/in/gunadi-naga-wijaya-432226151</a></li>
+        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/gunadi-naga-wijaya-432226151" target="_blank">linkedin.com/in/gunadi-naga-wijaya</a></li>
         <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Ryuukz" target="_blank">github.com/Ryuukz</a></li>
     </ul>
 </section>
