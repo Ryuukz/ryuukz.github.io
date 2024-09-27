@@ -4,128 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gunadi Naga Wijaya - Data Analyst Portfolio</title>
-    <!-- Import Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Import Font Awesome for Icons -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Body Styling */
-        body {
-            font-family: 'Raleway', sans-serif;
+        /* Base Style */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
             color: #333;
+            line-height: 1.6;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-            background-image: url('https://source.unsplash.com/1600x900/?technology,data');
-            background-size: cover;
-            background-position: center;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.2em;
+        h1, h2, h3, h4 {
+            font-family: 'Raleway', sans-serif;
             font-weight: 600;
         }
-        nav {
-            background-color: #333;
-            overflow: hidden;
+        a {
+            text-decoration: none;
+            color: inherit;
         }
-        nav a {
-            float: left;
-            display: block;
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?data,technology') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .hero a {
+            background-color: #ff6363;
+            padding: 15px 30px;
+            color: white;
+            border-radius: 30px;
+            font-size: 1.2em;
+            transition: 0.3s;
+        }
+        .hero a:hover {
+            background-color: #ff4747;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
             font-weight: 600;
         }
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            color: #ff6363;
         }
+
+        /* Section Styling */
         section {
-            padding: 20px;
-            margin: 20px auto;
+            padding: 80px 0;
+            text-align: center;
+            margin: 0 10px;
+        }
+        section h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        section h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: #ff6363;
+            display: block;
+            margin: 10px auto;
+        }
+        section p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        /* Projects Section */
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .project-card {
             background-color: white;
-            border-radius: 8px;
-            max-width: 900px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        h2 {
-            color: #4CAF50;
-            margin-bottom: 10px;
+        .project-card:hover {
+            transform: translateY(-10px);
         }
+        .project-card h3 {
+            font-size: 1.6em;
+            color: #333;
+        }
+        .project-card p {
+            color: #666;
+            margin: 10px 0;
+        }
+        .project-card a {
+            color: #ff6363;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .project-card a:hover {
+            color: #333;
+        }
+
+        /* Skills Section */
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .skills-list li {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .skills-list li:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .contact-info li {
+            margin: 10px 20px;
+            font-size: 1.2em;
+        }
+        .contact-info a {
+            color: #ff6363;
+        }
+
+        /* Footer */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-        }
-        .project-card {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 6px solid #4CAF50;
-        }
-        .project-card h3 {
-            margin: 0;
-        }
-        .project-card p {
-            color: #555;
-        }
-        .skills-list, .contact-info {
-            list-style: none;
-            padding: 0;
-        }
-        .skills-list li, .contact-info li {
-            margin: 10px 0;
-            font-size: 1.1em;
-        }
-        .skills-list i, .contact-info i {
-            margin-right: 10px;
-            color: #4CAF50;
-        }
-        .contact-info a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: 600;
-        }
-        .contact-info a:hover {
-            color: #333;
-        }
-        /* Add Hover Effects */
-        nav a:hover {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .project-card:hover {
-            border-left: 6px solid #333;
-            background-color: #fff;
+            padding: 20px 0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Gunadi Naga Wijaya</h1>
-    <p>Data Analyst | Python Enthusiast | Machine Learning</p>
-</header>
+<!-- Hero Section -->
+<section class="hero">
+    <div>
+        <h1>Gunadi Naga Wijaya</h1>
+        <p>Data Analyst | Machine Learning Enthusiast | Visualization Expert</p>
+        <a href="#projects">See My Work</a>
+    </div>
+</section>
 
+<!-- Navigation -->
 <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -133,54 +203,56 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<div class="container">
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Gunadi Naga Wijaya, a passionate data analyst with experience in customer segmentation, predictive modeling, and data visualization. I use tools like Python, Pandas, Scikit-learn, and Matplotlib to uncover insights from data. My goal is to leverage data to solve real-world business problems and provide actionable insights.</p>
-    </section>
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I'm a passionate Data Analyst with expertise in turning data into actionable insights. With skills in Python, machine learning, and data visualization, I help businesses make data-driven decisions that improve outcomes. Explore my projects and experience the impact of data analytics.</p>
+</section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-
+<!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
         <div class="project-card">
-            <h3><i class="fas fa-chart-pie"></i> Customer Segmentation for E-commerce</h3>
-            <p>Developed a customer segmentation model using K-means clustering for an e-commerce business, which helped enhance customer engagement and retention.</p>
-            <a href="#">View Project</a>
+            <h3>Customer Segmentation Model</h3>
+            <p>Used K-means clustering to identify key customer groups for an e-commerce business, resulting in better-targeted marketing strategies.</p>
+            <a href="#">Learn More</a>
         </div>
-
         <div class="project-card">
-            <h3><i class="fas fa-wrench"></i> Predictive Maintenance Model</h3>
-            <p>Built a predictive maintenance model that forecasts potential failures in machinery, using time-series data analysis and machine learning techniques.</p>
-            <a href="#">View Project</a>
+            <h3>Predictive Maintenance</h3>
+            <p>Built a machine learning model to predict machinery failure, helping reduce downtime by 15% in a manufacturing facility.</p>
+            <a href="#">Learn More</a>
         </div>
-
         <div class="project-card">
-            <h3><i class="fas fa-chart-line"></i> Interactive Sales Dashboard</h3>
-            <p>Created an interactive dashboard using Python and Tableau to monitor and analyze sales performance across different regions and products.</p>
-            <a href="#">View Project</a>
+            <h3>Sales Dashboard</h3>
+            <p>Developed an interactive sales dashboard using Tableau to visualize key sales performance metrics for various regions.</p>
+            <a href="#">Learn More</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li><i class="fas fa-code"></i> Python, Pandas, Numpy</li>
-            <li><i class="fas fa-project-diagram"></i> Scikit-learn, K-means, Random Forest</li>
-            <li><i class="fas fa-chart-bar"></i> Data Visualization: Matplotlib, Seaborn</li>
-            <li><i class="fas fa-database"></i> SQL, Excel, Tableau</li>
-        </ul>
-    </section>
+<!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li><i class="fas fa-code"></i> Python, Pandas, Numpy</li>
+        <li><i class="fas fa-brain"></i> Machine Learning (Scikit-learn, Keras)</li>
+        <li><i class="fas fa-chart-bar"></i> Data Visualization (Matplotlib, Seaborn, Tableau)</li>
+        <li><i class="fas fa-database"></i> SQL, Excel</li>
+    </ul>
+</section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <ul class="contact-info">
-            <li><i class="fas fa-envelope"></i> Email: <a href="mailto:gunadinagawijaya@gmail.com">gunadinagawijaya@gmail.com</a></li>
-            <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/gunadi-naga-wijaya-432226151" target="_blank">LinkedIn Profile</a></li>
-            <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Ryuukz" target="_blank">GitHub Profile</a></li>
-        </ul>
-    </section>
-</div>
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact</h2>
+    <ul class="contact-info">
+        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:gunadinagawijaya@gmail.com">gunadinagawijaya@gmail.com</a></li>
+        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/ygunadi-naga-wijaya-432226151</a></li>
+        <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/yourname" target="_blank">github.com/Ryuukz</a></li>
+    </ul>
+</section>
 
+<!-- Footer -->
 <footer>
     <p>&copy; 2024 Gunadi Naga Wijaya. All Rights Reserved.</p>
 </footer>
