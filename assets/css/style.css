@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#intro {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+#projects {
+  padding: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+}
+
+.project-card p {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+#contact ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#contact ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+#contact ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
