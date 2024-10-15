@@ -228,11 +228,17 @@ header.sticky {
     margin-bottom: 20px;
 }
 .box h3 {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 .box p {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: justify;
     font-size: var(--p-font);
     font-weight: 400;
     color: var(--other-color);
