@@ -33,7 +33,7 @@ img{
     height: 100%;
 }
 header{
-    background-image: url('https://github.com/Ryuukz/ryuukz.github.io/blob/main/Images/hero-bg.jpg');
+    background-image: url('Images/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
