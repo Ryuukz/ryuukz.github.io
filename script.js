@@ -22,3 +22,38 @@ const navList = document.querySelector('.navlist');
 menuIcon.addEventListener('click', () => {
      navList.classList.toggle('active');
 });
+
+var typed = new Typed('#text',{
+    strings:['Data Analyst.', 'German Speaker.', 'Machine Learning Enthusiast.']
+    typeSpeed:100,
+    backSpeed:100,
+    loop:true,
+});
+
+var typed = new Typed('#text2',{
+    strings:['1 Month', '2 Months', '3 Months']
+    typeSpeed:100,
+    backSpeed:100,
+    loop:true,
+});
+
+var typed = new Typed('#text3',{
+    strings:['Data Science', 'Applied Life Sciences']
+    typeSpeed:100,
+    backSpeed:100,
+    loop:true,
+});
+
+var typed = new Typed('#text4',{
+    strings:['1', '2', '3', '4', '5']
+    typeSpeed:100,
+    backSpeed:100,
+    loop:true,
+});
+
+var typed = new Typed('#text5',{
+    strings:['Indonesia', 'Germany', 'Singapore']
+    typeSpeed:100,
+    backSpeed:100,
+    loop:true,
+});
