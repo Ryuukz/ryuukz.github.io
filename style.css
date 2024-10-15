@@ -310,7 +310,7 @@ header.sticky {
     height: 55px;
     font-size: 27px;
     border-radius: 50%;
-    color: var(--text-color);
+    color: var(--main-color);
     background: #075fe4;
 }
 .row h4 {
