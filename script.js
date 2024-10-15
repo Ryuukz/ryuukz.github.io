@@ -5,7 +5,7 @@ window.addEventListener("scroll", function() {
         >120);
 })
 let menu = document.querySelector("#menu-icon");
-let navlist = document.querySelector('navlist');
+let navlist = document.querySelector('.navlist');
 
 menu.onclick = () =>{
     menu.classList.toggle('bx-x');
@@ -15,13 +15,6 @@ window.onscroll = () =>{
     menu.remove.toggle('bx-x');
     navlist.remove.toggle('active');
 }
-
-const menuIcon = document.getElementById('menu-icon');
-const navList = document.querySelector('.navlist');
-
-menuIcon.addEventListener('click', () => {
-     navList.classList.toggle('active');
-});
 
 var typed1 = new Typed('#text', {
     strings: ['Data Analyst.', 'German Speaker.', 'Machine Learning Enthusiast.'],
