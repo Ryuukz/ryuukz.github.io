@@ -204,13 +204,18 @@ header.sticky {
     font-size: var(--h2-font);
 }
 .services-content {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     align-items: center;
     gap: 2.3rem;
     margin-top: 4.2rem;
 }
 .box {
+    flex-basis: 23%;
+    margin-bottom: 20px;
+    text-align: center;
     padding: 80px 40px 66px;
     background: #2d343f;
     border-radius: 28px;
