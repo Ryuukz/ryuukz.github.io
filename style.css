@@ -453,11 +453,12 @@ form .send-btn:hover {
     }
     #menu-icon {
         display: block;
+        cursor: pointer;
     }
     .navlist {
         position: absolute;
         top: 100%;
-        right: 0;
+        right: -255px;
         width: 255px;
         min-height: 100vh;
         display: flex;
