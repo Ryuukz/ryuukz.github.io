@@ -3,271 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gunadi Naga Wijaya - Data Analyst Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Base Style */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #1D1D1D;
-            color: #FFFFFF;
-            line-height: 1.6;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Raleway', sans-serif;
-            font-weight: 600;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    <title>Portfolio</title>
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/1600x900/?data,analytics') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.5em;
-            margin-bottom: 40px;
-            color: #F4A261;
-        }
-        .hero a {
-            background-color: #F4A261;
-            padding: 15px 30px;
-            color: black;
-            border-radius: 30px;
-            font-size: 1.2em;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .hero a:hover {
-            background-color: #E76F51;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Navigation Bar */
-        nav {
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-            background-color: #333;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #F4A261;
-            font-weight: 600;
-        }
-        nav a:hover {
-            color: #E76F51;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 80px 0;
-            text-align: center;
-            margin: 0 10px;
-        }
-        section h2 {
-            font-size: 2.5em;
-            color: #FFFFFF;
-            margin-bottom: 20px;
-            position: relative;
-        }
-        section h2::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background-color: #F4A261;
-            display: block;
-            margin: 10px auto;
-        }
-        section p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 1.2em;
-            color: #E0E0E0;
-        }
-
-        /* Projects Section */
-        .projects {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .project-card {
-            background-color: #333;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-        .project-card h3 {
-            font-size: 1.6em;
-            color: #FFFFFF;
-        }
-        .project-card p {
-            color: #E0E0E0;
-            margin: 10px 0;
-        }
-        .project-card a {
-            color: #F4A261;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .project-card a:hover {
-            color: #E76F51;
-        }
-
-        /* Skills Section */
-        .skills-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0;
-        }
-        .skills-list li {
-            background-color: #333;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-            width: 250px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-            text-align: center;
-        }
-        .skills-list li:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-        .skills-list i {
-            color: #F4A261;
-            margin-right: 10px;
-            font-size: 1.5em;
-        }
-
-        /* Contact Section */
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .contact-info li {
-            margin: 10px 20px;
-            font-size: 1.2em;
-        }
-        .contact-info a {
-            color: #F4A261;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1D1D1D;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- Remix icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <!-- Swiper Slider CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js">
 </head>
+    
 <body>
-
-<!-- Hero Section -->
-<section class="hero">
-    <div>
-        <h1>Gunadi Naga Wijaya</h1>
-        <p>Hi! I'm a data enthusiast helping businesses leverage the power of data. Ready to explore?</p>
-        <a href="#projects">Explore My Projects</a>
-    </div>
-</section>
-
-<!-- Navigation -->
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Let's Connect</a>
-</nav>
-
-<!-- About Section -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>I’m Gunadi, a detail-oriented Data Analyst focused on transforming raw data into actionable insights. My experience spans across various industries, where I have helped businesses make smarter, data-driven decisions.</p>
-</section>
-
-<!-- Projects Section -->
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects">
+    <!-- HERO HEADER & NAV-->
+    <header id="home">
+        <nav>
+            <div class="logo">
+                <a href="#">Gunadi Naga Wijaya</a>
+            </div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Let's Connect</a></li>
+            </ul>
+            <div class="social_icon">
+                <i class="ri-whatsapp-fill"></i>
+                <i class="ri-linkedin-fill"></i>
+                <i class="ri-github-fill"></i>
+            </div>
+            <div class="bars">
+                <i class="ri-menu-2-line"></i>
+            </div>
+        </nav>
+        <div class="hero_content"></div>
+            <h2>Data Analyst</h2>
+            <h1>Hello my name is Gunadi Naga Wijaya. <br> I'm <span id="text"></span></h1>
+            <p>I'm a data enthusiast helping businesses leverage the power of data. Feel free to explore!</p>
+            <button>About Me</button>
+            </div>
+        <div class="hero_img">
+    </header>
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about_top">
+            <div class="about_image"></div>
+                <img src="Images/about1.jpg" alt="">
+                <img src="Images/about2.jpg" alt="" class="about_small">
+            <div class="about_content">
+                <h1>ABOUT ME</h1>
+                <p>As a data analyst with a knack for creative problem-solving, I enjoy tackling challenges with a balance of analytical rigor and innovative thinking. I am currently pursuing a double degree in Data Science and Applied Life Sciences. Through my studies, I’ve gained solid experience with essential data analytics tools such as Excel, SQL, Python, and Tableau. Furthermore, I also deepened my business acumen through hands-on projects at RevoU that addressed real-world business problems. These projects include exploratory data analysis (EDA), customer segmentation, A/B testing, and developing executive-level dashboards. With a strong foundation in analytical thinking, attention to detail, and effective communication, I’m confident that my ability to blend technical expertise with actionable insights will drive impactful results in data-driven projects and contribute to business growth.</p>
+                <button> class="skill_btn">Check My Skills</button>
+            </div>
+        </div>
+        <div class="about_bottom">
+            <div class="skill_box">
+                <h2>Excel</h2>
+                <div class="percent"></div>
+            </div>
+            <div class="skill_box">
+                <h2>SQL</h2>
+                <div class="percent"></div>
+            </div>
+            <div class="skill_box">
+                <h2>Python</h2>
+                <div class="percent"></div>
+            </div>
+            <div class="skill_box">
+                <h2>Power BI</h2>
+                <div class="percent"></div>
+            </div>
+            <div class="skill_box">
+                <h2>Tableau</h2>
+                <div class="percent"></div>
+            </div>
+        </div>
+    </section>
+    <!-- MINI HIRE ME SECTION -->
+    <section class="hireMe">
+        <h1>I Am Excited To Contribute</h1>
+        <button>Hire Me</button>
+    </section>
+    <!-- TESTIMONIAL -->
+    <section class="testimonials">
+        <div class="headings">
+            <h1>What Others Say</h1>
+            <p>You may find them imaginary, but believe me, it's true. </p>
+        </div>
+        <div class="swiper testSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!--slide 1 -->
+                    <div class="test_slide">
+                        <img src="Images/left-quote-svgrepo-com.svg" alt="">
+                        <div class="client_img">
+                            <img src="Images/testimonial1.jpg" alt="">
+                        </div>
+                        <p>Always make me wonder.</p>
+                        <h2>Peppe the Frog, Winner Best World Meme Character</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <!--slide 2 -->
+                    <div class="test_slide">
+                        <img src="Images/left-quote-svgrepo-com.svg" alt="">
+                        <div class="client_img">
+                            <img src="Images/testimonial2.jpg" alt="">
+                        </div>
+                        <p>Never cease to amaze me.</p>
+                        <h2>Lauren, Owner of Rizki Stationery Lampung</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <!--slide 3 -->
+                    <div class="test_slide">
+                        <img src="Images/left-quote-svgrepo-com.svg" alt="">
+                        <div class="client_img">
+                            <img src="Images/testimonial3.jpg" alt="">
+                        </div>
+                        <p>Sadly need to wait until course end.</p>
+                        <h2>Hopefully my SDC, Best SDC RevoU Next Batch ??</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PORTFOLIOS -->
+    <section class="portfolio" id="portfolio"></section>
+        <div class="headings">
+            <h2>My Projects</h2>
+            <h1>Explore My Hands-On Experience</h1>
+        </div>
+        <div class="projects">
         <div class="project-card">
-            <h3><i class="fas fa-users"></i> Customer Segmentation Model</h3>
+            <h1><i class="fas fa-users"></i> Smart Customer Segmentation for UK Non-Store Online Retail Company</h1>
             <p>Built a model to segment customers using K-means clustering, resulting in personalized marketing strategies that boosted engagement.</p>
             <a href="https://docs.google.com/presentation/d/14wxJ37KGoULEOBW4rBPfjXnuEx7ILAAmJbSE7CxcESc/edit#slide=id.p">Take a Look</a>
         </div>
         <div class="project-card">
-            <h3><i class="fas fa-cogs"></i> Predictive Sales Model</h3>
-            <p>Developed a machine learning model that predicts sales revenue, helping company setting goals for a specific period.</p>
+            <h1><i class="fas fa-cogs"></i> Fraud Detection Model</h1>
+            <p>Developed a machine learning model that automatically predicts fraud detection, helping finance company identify fraud transctions.</p>
             <a href="https://docs.google.com/spreadsheets/d/19jTe9fmtajaJi0_5uzm4fU3boT7h_cmr7W_qPAKopDQ/edit?gid=1698055955#gid=1698055955">Check It Out</a>
         </div>
         <div class="project-card">
-            <h3><i class="fas fa-chart-line"></i> Interactive Sales Dashboard</h3>
+            <h1><i class="fas fa-chart-line"></i> Dynamic Dashboard for Seamless Sales Performance</h1>
             <p>Created a dynamic PowerBI dashboard that allows sales teams to track and analyze performance metrics in real time.</p>
             <a href="#">View the Dashboard</a>
         </div>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills">
-    <h2>What I Do Best</h2>
-    <ul class="skills-list">
-        <li><i class="fas fa-code"></i> Python, Pandas, Numpy</li>
-        <li><i class="fas fa-brain"></i> Machine Learning (Scikit-learn)</li>
-        <li><i class="fas fa-chart-bar"></i> Data Visualization (Matplotlib, Seaborn, Tableau, PowerBI)</li>
-        <li><i class="fas fa-database"></i> SQL, Excel</li>
-    </ul>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Let's Connect!</h2>
-    <p>Interested in collaborating or want to know more about my work? Feel free to reach out. I'd love to chat!</p>
-    <ul class="contact-info">
-        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:gunadinagawijaya@gmail.com">gunadinagawijaya@gmail.com</a></li>
-        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/gunadi-naga-wijaya-432226151" target="_blank">Gunadi Naga Wijaya</a></li>
-        <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Ryuukz" target="_blank">Ryuukz</a></li>
-    </ul>
-</section>
-
-<!-- Footer -->
+    </section>
+    <!-- CONTACT ME -->
+    <section class="contact" id="contact">
+        <div class="headings">
+            <h1>Let's Connect</h1>
+            <p>Interested in collaborating or want to know more about my work? Feel free to reach out. I'd love to chat!</p>
+            <ul class="contact-info">
+                <li><i class="fas fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/6285163602297">(+62)851-6360-2297</a></li>
+                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:gunadinagawijaya@gmail.com">gunadinagawijaya@gmail.com</a></li>
+                <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/gunadi-naga-wijaya" target="_blank">Gunadi Naga Wijaya</a></li>
+                <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Ryuukz" target="_blank">Ryuukz</a></li>
+            </ul>
+        </div>
+    </section>
+        
+    <!-- Footer -->
 <footer>
     <p>&copy; 2024 Gunadi Naga Wijaya. All Rights Reserved.</p>
 </footer>
-
+    
+    <!-- Typed Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <!-- Swiper Slider JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
