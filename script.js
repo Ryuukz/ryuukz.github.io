@@ -4,8 +4,8 @@ const typed = new Typed('#text', {
     typeSpeed: 100,
     backSpeed: 100,
     loop: true,
-    backDelay: 1500, // Adding a slight delay before it loops back
-    startDelay: 500, // Adds a slight delay before typing starts
+    backDelay: 1500,
+    startDelay: 500,
 });
 
 // Show Skills Toggle: Toggles the display of the skills section
@@ -14,20 +14,15 @@ const skillDet = document.querySelector('.about_bottom');
 
 skillBtn.addEventListener('click', () => {
     skillDet.classList.toggle('show_skills');
-    
+
     // Toggle the button text based on the skills display
-    if(skillDet.classList.contains('show_skills')) {
-        skillBtn.textContent = 'Hide My Skills';
-    } else {
-        skillBtn.textContent = 'Check My Skills';
-    }
+    skillBtn.textContent = skillDet.classList.contains('show_skills') ? 'Hide My Skills' : 'Check My Skills';
 });
 
 // Sticky Navigation: Adds a sticky effect to the navigation bar when scrolling
 const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
-    // Adds the 'sticky_nav' class to the nav when scrolled beyond 100px
     if (window.scrollY > 100) {
         nav.classList.add('sticky_nav');
     } else {
@@ -35,32 +30,39 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Testimonial Swiper Slider Initialization
+// Swiper Slider for Testimonials
 const swiper = new Swiper('.testSwiper', {
-    slidesPerView: 1, // Display one slide at a time
-    loop: true, // Enable infinite loop
+    slidesPerView: 1,
+    loop: true,
     autoplay: {
-        delay: 3000, // Autoplay delay of 3 seconds
-        disableOnInteraction: false, // Keep autoplay after user interaction
+        delay: 3000,
+        disableOnInteraction: false,
     },
-    // Responsive breakpoints for Swiper
     breakpoints: {
         640: {
-            slidesPerView: 1, // 1 slide on small devices
+            slidesPerView: 1,
         },
         768: {
-            slidesPerView: 2, // 2 slides on medium devices
+            slidesPerView: 2,
         },
         1024: {
-            slidesPerView: 3, // 3 slides on large devices
+            slidesPerView: 3,
         },
     },
     pagination: {
-        el: '.swiper-pagination', // Pagination element
-        clickable: true, // Allows user to click on pagination bullets
+        el: '.swiper-pagination',
+        clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-button-next', // Next arrow button
-        prevEl: '.swiper-button-prev', // Previous arrow button
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
+});
+
+// Mobile Menu Toggle
+const bars = document.querySelector('.bars i');
+const menu = document.querySelector('nav ul');
+
+bars.addEventListener('click', () => {
+    menu.classList.toggle('show');
 });
