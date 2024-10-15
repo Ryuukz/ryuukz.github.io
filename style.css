@@ -211,7 +211,6 @@ header.sticky {
     margin-top: 4.2rem;
 }
 .box {
-    text-align: center;
     padding: 80px 40px 66px;
     background: #2d343f;
     border-radius: 28px;
@@ -257,19 +256,6 @@ header.sticky {
 .box:hover {
     border: 1px solid var(--main-color);
     transform: translateY(-5px) scale(1.03);
-}
-.box:hover h3 {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-.box .description {
-    display: none;
-    font-size: 1rem;
-    margin-top: 10px;
-}
-.box:hover .description {
-    display: block;
-    opacity: 1;
 }
 .portfolio {
     background: var(--second-bg-color);
