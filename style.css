@@ -43,6 +43,13 @@ header {
 span {
     color: var(--main-color);
 }
+.typing {
+    border-right: 2px solid var(--main-color);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
 .navlist {
     display: flex;
 }
