@@ -63,9 +63,26 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
+.hero_img {
+    position: relative;
+    height: 100vh;
+    background-image: url('./Images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero_img img.about_small {
+    position: absolute;
+    right: 20px; /* Position IU logo in bottom-right */
+    bottom: 20px;
+    width: 80px; /* Adjust logo size as needed */
+    opacity: 0.9;
+}
+
 .hero_content {
     margin: 50px auto;
     text-align: center;
+    position: relative; /* Position relative to its parent */
 }
 
 .hero_content h2 {
