@@ -16,46 +16,9 @@ window.onscroll = () =>{
     navlist.remove.toggle('active');
 }
 
-<script>
-    const roles = ["Data Analyst", "German Speaker", "Machine Learning Enthusiast"];
-    let index = 0;
-    let charIndex = 0;
-    let currentRole = roles[0];
-    let isDeleting = false;
-    const typingSpeed = 150; // Speed for typing
-    const deletingSpeed = 100; // Speed for deleting
-    const delayBetween = 2000; // Delay between roles
+const menuIcon = document.getElementById('menu-icon');
+const navList = document.querySelector('.navlist');
 
-    function typeEffect() {
-        const element = document.getElementById("dynamic-text");
-        
-        // Typing out the characters
-        if (!isDeleting && charIndex <= currentRole.length) {
-            element.innerText = currentRole.slice(0, charIndex);
-            charIndex++;
-            setTimeout(typeEffect, typingSpeed);
-        }
-        // Deleting the characters
-        else if (isDeleting && charIndex >= 0) {
-            element.innerText = currentRole.slice(0, charIndex);
-            charIndex--;
-            setTimeout(typeEffect, deletingSpeed);
-        }
-        // Move to next role
-        else if (charIndex < 0) {
-            isDeleting = false;
-            index = (index + 1) % roles.length; // Loop through the roles
-            currentRole = roles[index];
-            setTimeout(typeEffect, typingSpeed);
-        }
-        // Start deleting after delay
-        else {
-            isDeleting = true;
-            setTimeout(typeEffect, delayBetween);
-        }
-    }
-
-    // Start the typing effect
-    setTimeout(typeEffect, delayBetween);
-</script>
-
+menuIcon.addEventListener('click', () => {
+     navList.classList.toggle('active');
+});
