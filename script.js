@@ -1,37 +1,36 @@
-var typed = new Typed('#text',{
-    strings:['Data Analyst', 'German Speaker', 'Machine Learning Enthusiast'],
-    typeSpeed:100,
-    backSpeed:100,
-    loop:true,
+// Initialize Typed.js
+var typed = new Typed('#text', {
+    strings: ['Data Analyst!', 'German Speaker!', 'Machine Learning Enthusiast!'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true,
 });
 
-//SHOW SKILLS
-
+// SHOW SKILLS
 let skillBtn = document.querySelector('.skill_btn');
 let skillDet = document.querySelector('.about_bottom');
 
-skillBtn.addEventListener('click',() =>{
+skillBtn.addEventListener('click', () => {
     skillDet.classList.toggle('show_skills');
 });
 
-//STICKY NAV
+// STICKY NAV
+let nav = document.querySelector('nav'); // Fixed 'querySelecetor' to 'querySelector'
 
-let nav = document.querySelecetor('nav');
-
-window.addEventListener('scroll', () =>{
-    if(window.scrollY >100){
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
         nav.classList.add('sticky_nav');
-    }
-    else{
+    } else {
         nav.classList.remove('sticky_nav');
     }
 });
 
-//TESTIMONIAL SWIPER SLIDER
-
-var swiper = new Swiper('tesSwiper',{
-    slidePerView:1,
-    loop:true,
-    autoplay:true,
-})
-
+// TESTIMONIAL SWIPER SLIDER
+var swiper = new Swiper('.testSwiper', { // Added '.' to reference the class
+    slidesPerView: 1, // Fixed 'slidePerView' to 'slidesPerView'
+    loop: true,
+    autoplay: {
+        delay: 3000, // Added delay to autoplay configuration
+        disableOnInteraction: false,
+    },
+});
