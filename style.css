@@ -213,10 +213,14 @@ header.sticky {
     gap: 2.3rem;
     margin-top: 4.2rem;
 }
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    align-items: center;
+    gap: 2.3rem;
+    margin-top: 4.2rem;
+}
 .box {
-    flex-basis: 23%;
-    margin-bottom: 20px;
-    text-align: center;
     padding: 80px 40px 66px;
     background: #2d343f;
     border-radius: 28px;
@@ -229,17 +233,11 @@ header.sticky {
     margin-bottom: 20px;
 }
 .box h3 {
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 .box p {
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: justify;
     font-size: var(--p-font);
     font-weight: 400;
     color: var(--other-color);
