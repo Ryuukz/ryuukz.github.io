@@ -86,7 +86,7 @@ nav{
     color: var(--black-color);
     transition: var(--transition);
 }
-.menu li a hover{
+.menu li a:hover{
     color: var(--prime-color);
 }
 .social_icon{
@@ -102,7 +102,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background color: var(--prime-color);
+    background-color: var(--prime-color);
     color: var(--white-color);
 }
 .social_icon i:hover{
@@ -242,7 +242,7 @@ button:hover{
     align-items: flex-start;
     gap: 22px;
 }
-.skill_ box h2{
+.skill_box h2{
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -329,8 +329,8 @@ button:hover{
     font-weight: 300;
 }
 .test_slide h2{
-    font_size: 1.2rem;
-    font_weight: 400;
+    font-size: 1.2rem;
+    font-weight: 400;
     transition: var(--prime-color);
 }
 .test_slide h2:hover{
