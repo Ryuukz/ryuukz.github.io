@@ -230,7 +230,7 @@ header.sticky {
     margin-bottom: 10px;
 }
 .box p {
-    display: inline-flexbox;
+    display: flexbox;
     justify-content: space-evenly;
     font-size: var(--p-font);
     font-weight: 400;
