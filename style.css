@@ -206,57 +206,58 @@ header.sticky {
 }
 .services-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted to ensure even distribution */
-    align-items: center;
-    gap: 2.3rem;
-    margin-top: 4.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensure responsive columns */
+    align-items: stretch; /* Make boxes stretch to fill the space evenly */
+    gap: 2rem; /* Adjust gap for a balanced look */
+    margin-top: 3rem; /* Adjust margin for better spacing */
 }
 .box {
-    padding: 80px 40px 66px;
+    padding: 40px 20px; /* Adjust padding for more compact design */
     background: #2d343f;
-    border-radius: 28px;
+    border-radius: 20px; /* Adjust border radius for a sleeker look */
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
-    transition: all 0.5s ease;
+    transition: all 0.3s ease; /* Adjusted transition speed */
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure content inside the box is spaced evenly */
-    height: 100%; /* Ensures the boxes maintain equal height */
+    justify-content: space-between;
+    height: 100%;
+    text-align: center; /* Center text for better alignment */
 }
 .box img {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduce margin for better spacing */
     max-width: 100%;
     height: auto;
+    object-fit: contain; /* Ensure images are contained properly */
 }
 .box h3 {
-    font-size: 30px;
+    font-size: 24px; /* Adjusted font size for better fit */
     font-weight: 700;
-    margin-bottom: 10px;
-    color: #ffffff; /* Consistent with the title style */
+    margin-bottom: 8px;
+    color: #ffffff;
 }
 .box p {
-    justify-content: space-evenly;
-    font-size: var(--p-font);
+    font-size: 16px; /* Adjusted font size for better readability */
     font-weight: 400;
     color: var(--other-color);
-    line-height: 30px;
-    margin-bottom: 20px;
-    text-align: justify;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    text-align: justify; /* Keep justification for paragraph text */
 }
 .box a {
     display: inline-block;
-    font-size: 22px;
-    line-height: 1.273em;
+    font-size: 18px; /* Adjusted font size for button */
+    line-height: 1.2em;
     font-weight: 700;
-    padding: 7px 0;
+    padding: 5px 0;
     color: var(--text-color);
     border-bottom: 2px solid #5d6c83;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 .box i {
     vertical-align: middle;
-    font-size: 25px;
+    font-size: 22px; /* Adjust icon size */
     color: var(--main-color);
     margin-left: 5px;
 }
@@ -265,7 +266,7 @@ header.sticky {
 }
 .box:hover {
     border: 1px solid var(--main-color);
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(-5px) scale(1.02);
 }
 .portfolio {
     background: var(--second-bg-color);
