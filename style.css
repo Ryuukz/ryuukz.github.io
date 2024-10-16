@@ -338,9 +338,25 @@ header.sticky {
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
 }
-.new-icons i:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px var(--main-color);
+.new-icons i {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px; /* Match the button's border-radius */
+    background: transparent; /* Start with a transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease; /* Smooth transition for all properties */
+}
+.row:hover .new-icons i:hover {
+    background: var(--main-color); /* Match hover background to button */
+    color: var(--bg-color); /* Text color changes to match button hover */
+    box-shadow: 0 0 20px var(--main-color); /* Adds glow effect on hover */
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+    cursor: pointer;
 }
 .project-description {
     opacity: 0;
