@@ -275,15 +275,15 @@ header.sticky {
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
     padding: 10px 20px;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: auto; /* Auto height to adapt to content size */
-    z-index: 0; /* Keep default stacking order */
 }
+
 .project-title {
     font-size: 22px;
     font-weight: 700;
@@ -317,13 +317,14 @@ header.sticky {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
 }
 .new-icons {
     display: none;
     flex-direction: column;
     gap: 5px;
     align-items: center;
+    z-index: 2;
 }
 .row:hover .old-icon {
     opacity: 0;
@@ -331,11 +332,14 @@ header.sticky {
 }
 .row:hover .new-icons {
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out;
 }
 .project-description {
     opacity: 0;
     max-height: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
     visibility: hidden;
     margin: 0;
     padding: 0 15px;
@@ -350,8 +354,7 @@ header.sticky {
     opacity: 1;
     visibility: visible;
     padding: 15px 20px;
-    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
-    z-index: 1; /* Ensure description stays above */
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 .project-description .label {
     display: inline-block;
