@@ -206,7 +206,7 @@ header.sticky {
 }
 .services-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted to ensure even distribution */
     align-items: center;
     gap: 2.3rem;
     margin-top: 4.2rem;
@@ -217,16 +217,23 @@ header.sticky {
     border-radius: 28px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
-    transition: all .50s ease;
+    transition: all 0.5s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content inside the box is spaced evenly */
+    height: 100%; /* Ensures the boxes maintain equal height */
 }
 .box img {
     margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
 }
 .box h3 {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 10px;
+    color: #ffffff; /* Consistent with the title style */
 }
 .box p {
     justify-content: space-evenly;
@@ -235,6 +242,7 @@ header.sticky {
     color: var(--other-color);
     line-height: 30px;
     margin-bottom: 20px;
+    text-align: justify;
 }
 .box a {
     display: inline-block;
@@ -244,7 +252,7 @@ header.sticky {
     padding: 7px 0;
     color: var(--text-color);
     border-bottom: 2px solid #5d6c83;
-    transition: all .50s ease;
+    transition: all 0.5s ease;
 }
 .box i {
     vertical-align: middle;
