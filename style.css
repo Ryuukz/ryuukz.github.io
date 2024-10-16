@@ -326,7 +326,7 @@ header.sticky {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px transparent;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.5s ease-;
 }
 .new-icons {
     display: none;
@@ -344,6 +344,13 @@ header.sticky {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+.row:hover .new-icons i:hover {
+    background: var(--main-color); /* Background change on hover like .h-btn */
+    color: var(--bg-color); /* Text color change on hover */
+    box-shadow: 0 0 20px var(--main-color); /* Add glow effect on hover */
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
     cursor: pointer;
 }
 .project-description {
