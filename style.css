@@ -205,16 +205,9 @@ header.sticky {
     font-size: var(--h2-font);
 }
 .services-content {
-    display: flex;
-    justify-content: space-between;
+    display: inline-flexbox;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-    align-items: center;
-    gap: 2.3rem;
-    margin-top: 4.2rem;
-}
-.services-content {
-    display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,auto));
     align-items: center;
     gap: 2.3rem;
