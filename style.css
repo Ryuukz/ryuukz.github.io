@@ -206,48 +206,59 @@ header.sticky {
 }
 .services-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensure responsive columns */
-    align-items: stretch; /* Make boxes stretch to fill the space evenly */
-    gap: 2rem; /* Adjust gap for a balanced look */
-    margin-top: 3rem; /* Adjust margin for better spacing */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    align-items: stretch;
+    gap: 2rem; /* Space between boxes */
+    margin-top: 3rem;
 }
+
+@media (max-width: 768px) {
+    .services-content {
+        grid-template-columns: 1fr; /* Switch to single column for smaller screens */
+    }
+}
+
 .box {
-    padding: 40px 20px; /* Adjust padding for more compact design */
+    padding: 40px 20px;
     background: #2d343f;
-    border-radius: 20px; /* Adjust border radius for a sleeker look */
+    border-radius: 20px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
-    transition: all 0.3s ease; /* Adjusted transition speed */
+    transition: all 0.3s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    text-align: center; /* Center text for better alignment */
+    text-align: center;
 }
+
 .box img {
-    margin-bottom: 15px; /* Reduce margin for better spacing */
+    margin-bottom: 15px;
     max-width: 100%;
     height: auto;
-    object-fit: contain; /* Ensure images are contained properly */
+    object-fit: contain;
 }
+
 .box h3 {
-    font-size: 24px; /* Adjusted font size for better fit */
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 8px;
     color: #ffffff;
 }
+
 .box p {
-    font-size: 16px; /* Adjusted font size for better readability */
+    font-size: 16px;
     font-weight: 400;
     color: var(--other-color);
     line-height: 1.5em;
     margin-bottom: 15px;
-    text-align: justify; /* Keep justification for paragraph text */
+    text-align: justify;
 }
+
 .box a {
     display: inline-block;
-    font-size: 18px; /* Adjusted font size for button */
+    font-size: 18px;
     line-height: 1.2em;
     font-weight: 700;
     padding: 5px 0;
@@ -255,19 +266,23 @@ header.sticky {
     border-bottom: 2px solid #5d6c83;
     transition: all 0.3s ease;
 }
+
 .box i {
     vertical-align: middle;
-    font-size: 22px; /* Adjust icon size */
+    font-size: 22px;
     color: var(--main-color);
     margin-left: 5px;
 }
+
 .box a:hover {
     border-bottom: 2px solid var(--main-color);
 }
+
 .box:hover {
     border: 1px solid var(--main-color);
     transform: translateY(-5px) scale(1.02);
 }
+
 .portfolio {
     background: var(--second-bg-color);
 }
