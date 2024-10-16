@@ -262,6 +262,7 @@ header.sticky {
 .portfolio {
     background: var(--second-bg-color);
 }
+
 .Portfolio-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -269,56 +270,61 @@ header.sticky {
     gap: 2.3rem;
     margin-top: 4.2rem;
 }
+
 .row {
     background: #2d343f;
     border-radius: 28px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
     padding: 10px 20px;
-    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+    transition: all 0.3s ease-in-out;
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto; /* Auto height to adapt to content size */
+    height: auto; /* Ensures height adjusts to content */
 }
 
 .project-title {
     font-size: 22px;
     font-weight: 700;
-    color: #FFFFFF; /* White color for project title */
+    color: #FFFFFF;
     margin: 0 0 10px 0;
 }
+
 .business-name {
     font-size: 18px;
     font-weight: 500;
     margin-top: 15px;
-    color: var(--main-color); /* Use original blue color */
+    color: var(--main-color);
 }
+
 .icon-area {
     position: absolute;
-    top: 10px; /* Position icons at the top-right */
+    top: 10px;
     right: 10px;
     display: flex;
     flex-direction: column-reverse;
-    align-items: flex-end; /* Aligns the icons to the right */
+    align-items: flex-end;
     gap: 5px;
-    z-index: 2; /* Ensure icons stay above other content */
+    z-index: 2;
 }
+
 .old-icon,
 .new-icons i {
     width: 55px;
     height: 55px;
     font-size: 24px;
-    color: var(--main-color); /* Original blue color */
+    color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    transition: opacity 0.3s ease-in-out;
 }
+
 .new-icons {
     display: none;
     flex-direction: column;
@@ -326,16 +332,19 @@ header.sticky {
     align-items: center;
     z-index: 2;
 }
+
 .row:hover .old-icon {
     opacity: 0;
     visibility: hidden;
 }
+
 .row:hover .new-icons {
     display: flex;
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease-in-out;
 }
+
 .project-description {
     opacity: 0;
     max-height: 0;
@@ -347,22 +356,35 @@ header.sticky {
     color: var(--other-color);
     text-align: justify;
     text-justify: inter-word;
-    line-height: 1.5; /* Improves text readability */
+    line-height: 1.6; /* Better readability */
+    hyphens: auto;
+    word-wrap: break-word;
 }
+
 .row:hover .project-description {
-    max-height: 300px;
+    max-height: 400px; /* Adjusted to fit longer content */
     opacity: 1;
     visibility: visible;
     padding: 15px 20px;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
+
 .project-description .label {
     display: inline-block;
     width: 120px;
     font-weight: bold;
-    color: var(--main-color); /* Original blue color */
+    color: var(--main-color);
     margin-bottom: 5px;
 }
+
+.project-description span {
+    display: inline-block;
+    text-align: justify;
+    width: calc(100% - 130px);
+    margin-left: 130px; /* Aligns with the label */
+    word-wrap: break-word;
+}
+
 .contact-form {
     display: flex;
     align-items: center;
