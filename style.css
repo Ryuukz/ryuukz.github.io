@@ -262,7 +262,6 @@ header.sticky {
 .portfolio {
     background: var(--second-bg-color);
 }
-
 .Portfolio-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -270,7 +269,6 @@ header.sticky {
     gap: 2.3rem;
     margin-top: 4.2rem;
 }
-
 .row {
     background: #2d343f;
     border-radius: 28px;
@@ -285,7 +283,6 @@ header.sticky {
     justify-content: space-between;
     height: auto;
 }
-
 .project-title {
     font-size: 22px;
     font-weight: 700;
@@ -293,14 +290,12 @@ header.sticky {
     margin: 0 0 10px 0;
     padding-right: 70px; /* Ensure space for the icon area */
 }
-
 .business-name {
     font-size: 18px;
     font-weight: 500;
     margin-top: 15px;
     color: var(--main-color);
 }
-
 .icon-area {
     position: absolute;
     top: 10px;
@@ -311,21 +306,20 @@ header.sticky {
     gap: 5px;
     z-index: 2;
 }
-
 .old-icon,
 .new-icons i {
-    width: 55px;
-    height: 55px;
-    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
     color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 20px transparent;
     transition: opacity 0.3s ease-in-out;
 }
-
 .new-icons {
     display: none;
     flex-direction: column;
@@ -333,12 +327,10 @@ header.sticky {
     align-items: center;
     z-index: 2;
 }
-
 .row:hover .old-icon {
     opacity: 0;
     visibility: hidden;
 }
-
 .row:hover .new-icons {
     display: flex;
     opacity: 1;
@@ -346,7 +338,10 @@ header.sticky {
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
 }
-
+.new-icons i:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--main-color);
+}
 .project-description {
     opacity: 0;
     max-height: 0;
@@ -362,7 +357,6 @@ header.sticky {
     hyphens: auto;
     word-wrap: break-word;
 }
-
 .row:hover .project-description {
     max-height: 400px;
     opacity: 1;
@@ -370,7 +364,6 @@ header.sticky {
     padding: 15px 20px;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
-
 .project-description .label {
     display: inline-block;
     width: 120px;
@@ -378,7 +371,6 @@ header.sticky {
     color: var(--main-color);
     margin-bottom: 5px;
 }
-
 .project-description span {
     display: inline-block;
     text-align: justify;
@@ -386,7 +378,6 @@ header.sticky {
     margin-left: 130px;
     word-wrap: break-word;
 }
-
 .contact-form {
     display: flex;
     align-items: center;
