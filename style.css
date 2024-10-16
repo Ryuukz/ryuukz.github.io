@@ -274,15 +274,11 @@ header.sticky {
     border-radius: 28px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
-    padding: 20px;
-    transition: all 0.5s ease;
+    padding: 10px 20px; /* Compact padding for initial display */
+    transition: all 0.5s ease; /* Smooth transition for size change */
     overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures content is evenly spaced */
-    height: 100%; /* Make sure rows stretch to fill the height */
-    min-height: 400px; /* Set a minimum height for uniformity */
+    display: inline-block; /* Fits content initially */
 }
 .row img {
     height: auto;
@@ -301,6 +297,7 @@ header.sticky {
     font-size: 20px;
     font-weight: 600;
     color: var(--other-color);
+    margin: 0;
 }
 .row i {
     display: inline-flex;
@@ -314,6 +311,10 @@ header.sticky {
     backdrop-filter: brightness(88%);
     transition: opacity 0.4s ease; /* Smooth transition for hiding */
 }
+.row:hover {
+    padding: 20px; /* Expand padding to fit the description */
+    border: 1px solid var(--main-color); /* Ensure border is visible */
+}
 .row:hover i {
     opacity: 0; /* Hide the icon on hover */
     visibility: hidden;
@@ -321,34 +322,23 @@ header.sticky {
 .row h4 {
     font-size: 25px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin: 5px 0;
     line-height: 1.4;
 }
 .project-description {
-    text-align: justify;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
     visibility: hidden;
     margin: 0;
-    padding: 0 20px; /* Adjust padding for full-width */
-    background: #2d343f; /* Same background to blend with the box */
-    border-radius: 28px; /* Matches the rounded corners of the box */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 0 15px;
 }
 .row:hover .project-description {
-    max-height: 100%; /* Expand to fill entire box */
+    max-height: 300px; /* Adjust this based on content length */
     opacity: 1;
     visibility: visible;
-    padding: 20px;
-    border: none; /* Remove border to ensure full blend with the box */
+    padding: 10px 15px;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 .project-description .label {
     display: inline-block;
