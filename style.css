@@ -311,10 +311,33 @@ header.sticky {
     margin-bottom: 10px;
     line-height: 1.4;
 }
-.row:hover {
+.row-text {
+    position: relative;
+    overflow: hidden;
+}
+.project-description {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    visibility: hidden;
+    margin: 0;
+}
+.project-title,
+.business-name {
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+.row:hover .project-description {
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
     border: 1px solid var(--main-color);
     transform: translateY(-5px) scale(1.03);
     cursor: pointer;
+}
+.row:hover .project-title,
+.row:hover .business-name {
+    opacity: 0;
 }
 .contact-form {
     display: flex;
