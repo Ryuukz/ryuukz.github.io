@@ -206,7 +206,6 @@ header.sticky {
 }
 .services-content {
     display: inline-flexbox;
-    justify-content: space-evenly;
     flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit,minmax(300px,auto));
     align-items: center;
@@ -231,6 +230,8 @@ header.sticky {
     margin-bottom: 10px;
 }
 .box p {
+    display: inline-flexbox;
+    justify-content: space-evenly;
     font-size: var(--p-font);
     font-weight: 400;
     color: var(--other-color);
