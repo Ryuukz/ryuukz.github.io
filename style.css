@@ -382,19 +382,21 @@ header.sticky {
 }
 .project-description .label {
     display: inline-block;
-    min-width: 130px;
+    min-width: 120px; /* Slightly narrower to save space */
     font-weight: bold;
     color: var(--main-color);
     margin-bottom: 5px;
     vertical-align: top; /* Keeps labels aligned with the top of the text */
+    text-align: left; /* Aligns the label text to the left */
 }
 .project-description span {
     display: inline-block;
-    width: calc(100% - 140px); /* Adjust the width based on the label */
-    margin-left: 130px; /* Aligns the text with the label */
+    width: calc(100% - 130px); /* Adjust width for better alignment */
+    margin-left: 10px; /* Slight spacing between label and text */
     word-wrap: break-word;
     line-height: 1.6; /* Consistent line height for better readability */
-    text-align: justify;
+    text-align: justify; /* Justify the text for cleaner appearance */
+    margin-bottom: 5px; /* Adds spacing between each line */
 }
 .contact-form {
     display: flex;
