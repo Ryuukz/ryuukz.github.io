@@ -390,6 +390,10 @@ header.sticky {
     visibility: visible;
     padding: 15px 20px;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-wrap: break-word;
 }
 .project-description .label {
     display: inline-block;
