@@ -281,13 +281,15 @@ header.sticky {
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
     padding: 20px;
-    transition: all .50s ease;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: relative;
 }
 .main-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 .row h5 {
     font-size: 20px;
@@ -311,47 +313,43 @@ header.sticky {
     margin-bottom: 10px;
     line-height: 1.4;
 }
-.project-description strong {
-    display: inline-block;
-    width: 120px; /* Adjust the width as needed to align text */
-}
-.project-description strong + br {
-    display: none; /* Hide line breaks after strong if used */
-}
-.project-description span {
-    display: inline-block;
-    text-align: justify;
-    text-indent: -120px; /* Matches the width of the strong */
-    margin-left: 120px; /* Aligns with the text after strong */
-}
-.row-text {
-    position: relative;
-    overflow: hidden;
-}
 .project-description {
     text-align: justify;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
     visibility: hidden;
     margin: 0;
+    padding: 0 15px;
+}
+.row:hover .project-description {
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+    padding: 15px;
+    border: 1px solid var(--main-color);
+    transform: translateY(0px) scale(1);
+    cursor: default;
+}
+.project-description .label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 .project-title,
 .business-name {
     transition: opacity 0.4s ease;
     opacity: 1;
 }
-.row:hover .project-description {
-    max-height: 300px;
-    opacity: 1;
-    visibility: visible;
-    border: 1px solid var(--main-color);
-    transform: translateY(-5px) scale(1.03);
-    cursor: pointer;
-}
 .row:hover .project-title,
 .row:hover .business-name {
     opacity: 0;
+}
+.row-text {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 15px;
 }
 .contact-form {
     display: flex;
