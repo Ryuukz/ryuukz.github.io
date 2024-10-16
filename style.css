@@ -205,7 +205,7 @@ header.sticky {
     font-size: var(--h2-font);
 }
 .services-content {
-    display: inline-flexbox;
+    display: flexbox;
     flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit,minmax(300px,auto));
     align-items: center;
