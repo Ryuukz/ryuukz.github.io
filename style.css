@@ -299,10 +299,9 @@ header.sticky {
     position: absolute;
     top: 10px; /* Position icons at the top-right */
     right: 10px;
-    height: auto;
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: flex-end; /* Aligns the icons to the right */
     gap: 5px;
 }
 .old-icon,
@@ -339,6 +338,7 @@ header.sticky {
     color: var(--other-color);
     text-align: justify;
     text-justify: inter-word;
+    line-height: 1.5; /* Improves text readability */
 }
 .row:hover .project-description {
     max-height: 300px;
