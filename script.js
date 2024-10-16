@@ -1,59 +1,77 @@
+// Sticky header on scroll
 const header = document.querySelector("header");
 
-window.addEventListener("scroll", function() {
-    header.classList.toggle("sticky",this.window.scrollY
-        >120);
-})
-let menu = document.querySelector("#menu-icon");
-let navlist = document.querySelector('.navlist');
+window.addEventListener("scroll", () => {
+    header.classList.toggle("sticky", window.scrollY > 120);
+});
 
-menu.onclick = () =>{
-    menu.classList.toggle('bx-x');
-    navlist.classList.toggle('active');
-}
-window.onscroll = () =>{
-    menu.remove.toggle('bx-x');
-    navlist.remove.toggle('active');
-}
+// Mobile menu toggle
+const menu = document.querySelector("#menu-icon");
+const navlist = document.querySelector(".navlist");
 
-var typed = new Typed('#text', {
+menu.addEventListener("click", () => {
+    menu.classList.toggle("bx-x");
+    navlist.classList.toggle("active");
+});
+
+// Close menu on scroll
+window.addEventListener("scroll", () => {
+    if (menu.classList.contains("bx-x")) {
+        menu.classList.remove("bx-x");
+        navlist.classList.remove("active");
+    }
+});
+
+// Typed.js configuration for text animation
+new Typed("#text", {
     strings: ['Data Analyst.', 'German Speaker.', 'Machine Learning Enthusiast.'],
     typeSpeed: 100,
     backSpeed: 100,
     loop: true,
 });
 
-document.querySelectorAll('.row').forEach((row) => {
-    const description = row.querySelector('.project-description');
-    const icon = row.querySelector('i');
-
-    // Store the initial height of the row
+// Expand and collapse project descriptions on hover or click
+document.querySelectorAll(".row").forEach(row => {
+    const description = row.querySelector(".project-description");
+    const icon = row.querySelector(".old-icon");
     const initialHeight = row.offsetHeight;
 
-    row.addEventListener('mouseenter', () => {
-        // Show the description and calculate its full height
-        description.style.display = 'block';
+    // Function to show the description
+    const showDescription = () => {
+        description.style.display = "block";
         const descriptionHeight = description.scrollHeight;
+        row.style.height = `${initialHeight + descriptionHeight}px`;
+        description.style.maxHeight = `${descriptionHeight}px`;
+        description.style.opacity = 1;
+        icon.style.opacity = 0;
+        icon.style.visibility = "hidden";
+    };
 
-        // Expand the row to fit the description
-        row.style.height = initialHeight + descriptionHeight + 'px';
-        description.style.maxHeight = descriptionHeight + 'px'; // Allow the description to expand
-        description.style.opacity = 1; // Fade in the description
-        icon.style.opacity = 0; // Hide the icon
-        icon.style.visibility = 'hidden'; // Ensure the icon is not visible
-    });
+    // Function to hide the description
+    const hideDescription = () => {
+        description.style.maxHeight = "0";
+        description.style.opacity = 0;
+        row.style.height = `${initialHeight}px`;
+        icon.style.opacity = 1;
+        icon.style.visibility = "visible";
 
-    row.addEventListener('mouseleave', () => {
-        // Revert the row height to its initial state
-        description.style.maxHeight = '0'; // Collapse the description
-        description.style.opacity = 0; // Fade out the description
-        row.style.height = initialHeight + 'px';
-        icon.style.opacity = 1; // Show the icon
-        icon.style.visibility = 'visible'; // Ensure the icon is visible again
-
-        // Hide the description after the transition to prevent overflow
         setTimeout(() => {
-            description.style.display = 'none';
+            description.style.display = "none";
         }, 400); // Matches the CSS transition duration (0.4s)
+    };
+
+    // Event listeners for hover (desktop)
+    row.addEventListener("mouseenter", showDescription);
+    row.addEventListener("mouseleave", hideDescription);
+
+    // Event listener for click (mobile)
+    row.addEventListener("click", () => {
+        // Check if the description is currently visible
+        const isDescriptionVisible = description.style.maxHeight !== "0" && description.style.maxHeight !== "";
+        if (isDescriptionVisible) {
+            hideDescription();
+        } else {
+            showDescription();
+        }
     });
 });
