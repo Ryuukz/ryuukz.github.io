@@ -283,7 +283,7 @@ header.sticky {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto; /* Ensures height adjusts to content */
+    height: auto;
 }
 
 .project-title {
@@ -291,6 +291,7 @@ header.sticky {
     font-weight: 700;
     color: #FFFFFF;
     margin: 0 0 10px 0;
+    padding-right: 70px; /* Ensure space for the icon area */
 }
 
 .business-name {
@@ -343,6 +344,7 @@ header.sticky {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .project-description {
@@ -356,13 +358,13 @@ header.sticky {
     color: var(--other-color);
     text-align: justify;
     text-justify: inter-word;
-    line-height: 1.6; /* Better readability */
+    line-height: 1.6;
     hyphens: auto;
     word-wrap: break-word;
 }
 
 .row:hover .project-description {
-    max-height: 400px; /* Adjusted to fit longer content */
+    max-height: 400px;
     opacity: 1;
     visibility: visible;
     padding: 15px 20px;
@@ -381,7 +383,7 @@ header.sticky {
     display: inline-block;
     text-align: justify;
     width: calc(100% - 130px);
-    margin-left: 130px; /* Aligns with the label */
+    margin-left: 130px;
     word-wrap: break-word;
 }
 
