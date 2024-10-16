@@ -536,9 +536,9 @@ form .send-btn:hover {
     }
     .about-img ig {
         text-align: center;
-        width: 300px;
-        height: 300px;
-        max-width: 300px;
+        width: 150px;
+        height: 150px;
+        max-width: 150px;
         border-radius: 50%;
         object-fit: cover;
         margin: 0 auto;
