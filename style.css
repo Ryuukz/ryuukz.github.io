@@ -316,7 +316,7 @@ header.sticky {
 }
 .old-icon,
 .new-icons i {
-    width: 40px;
+    width: 40px; /* Same size for both old and new icons */
     height: 40px;
     font-size: 20px;
     color: var(--main-color);
@@ -344,26 +344,6 @@ header.sticky {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease-in-out;
-    cursor: pointer;
-}
-.new-icons i {
-    width: 55px;
-    height: 55px;
-    font-size: 24px;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    border-radius: 8px; /* Match the button's border-radius */
-    background: transparent; /* Start with a transparent background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease; /* Smooth transition for all properties */
-}
-.row:hover .new-icons i:hover {
-    background: var(--main-color); /* Match hover background to button */
-    color: var(--bg-color); /* Text color changes to match button hover */
-    box-shadow: 0 0 20px var(--main-color); /* Adds glow effect on hover */
-    transform: scale(1.1); /* Slightly enlarges the icon on hover */
     cursor: pointer;
 }
 .project-description {
@@ -399,12 +379,13 @@ header.sticky {
 }
 .project-description span {
     display: inline-block;
-    width: calc(100% - 130px); /* Adjust width for better alignment */
+    width: calc(100% - 140px); /* Adjust width for better alignment */
     margin-left: 10px; /* Slight spacing between label and text */
     word-wrap: break-word;
     line-height: 1.6; /* Consistent line height for better readability */
     text-align: justify; /* Justify the text for cleaner appearance */
     margin-bottom: 5px; /* Adds spacing between each line */
+    hyphens: auto; /* Break words for better alignment */
 }
 .contact-form {
     display: flex;
