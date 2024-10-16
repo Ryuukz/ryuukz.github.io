@@ -264,8 +264,8 @@ header.sticky {
 }
 .Portfolio-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust columns */
-    align-items: stretch; /* Ensure all rows stretch equally */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: stretch;
     gap: 2.3rem;
     margin-top: 4.2rem;
 }
@@ -274,42 +274,38 @@ header.sticky {
     border-radius: 28px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
-    padding: 10px 20px; /* Compact padding for initial display */
-    transition: all 0.4s ease; /* Smooth transition for size change */
+    padding: 10px 20px;
+    transition: all 0.4s ease;
     overflow: hidden;
     position: relative;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* Make sure rows stretch to fill the height */
+    height: 100%;
 }
 .project-title {
-    font-size: 22px; /* Make project title larger */
+    font-size: 22px;
     font-weight: 700;
-    color: var(--main-color); /* Original blue color */
-    margin: 0 0 10px 0; /* Add margin for spacing */
+    color: var(--main-color);
+    margin: 0 0 10px 0;
 }
 .business-name {
-    font-size: 18px; /* Adjusted for eye-catching look */
+    font-size: 18px;
     font-weight: 500;
     margin-top: 15px;
-    color: var(--main-color); /* Use original blue color */
+    color: var(--main-color);
 }
 .icon-area {
     position: absolute;
-    top: 10px; /* Position icon at the top right */
+    bottom: 10px;
     right: 10px;
-    height: 55px; /* Ensure consistent height */
-    display: flex;
-    flex-direction: column; /* Ensure multiple icons stack vertically */
-    align-items: center;
-    gap: 10px;
+    height: auto;
 }
 .old-icon {
     width: 55px;
     height: 55px;
     font-size: 24px;
-    color: var(--main-color); /* Original blue color */
+    color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 50%;
     display: flex;
@@ -319,11 +315,10 @@ header.sticky {
 }
 .new-icons {
     display: none;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    gap: 10px;
-    height: 100%;
-    justify-content: center;
+    gap: 5px;
+    height: auto;
 }
 .row:hover .old-icon {
     opacity: 0;
@@ -339,23 +334,23 @@ header.sticky {
     visibility: hidden;
     margin: 0;
     padding: 0 15px;
-    display: block; /* Ensure the description block takes up space when visible */
-    color: var(--other-color); /* Match color with the rest of the text */
+    display: block;
+    color: var(--other-color);
     text-align: justify;
-    text-justify: inter-word; /* Space text evenly */
+    text-justify: inter-word;
 }
 .row:hover .project-description {
-    max-height: 300px; /* Adjust based on content length */
+    max-height: 300px;
     opacity: 1;
     visibility: visible;
-    padding: 15px 20px; /* Remove free space at the top */
+    padding: 15px 20px;
     transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 .project-description .label {
     display: inline-block;
-    width: 120px; /* Consistent label width */
+    width: 120px;
     font-weight: bold;
-    color: var(--main-color); /* Original blue color */
+    color: var(--main-color);
     margin-bottom: 5px;
 }
 .contact-form {
