@@ -529,16 +529,16 @@ form .send-btn:hover {
         width: 100%;    
     }
 }
-@media(max-width:470px) {
+@media(max-width:480px) {
     :root {
         --h1-font:3rem;
         --h2-font:2rem;
     }
     .about-img ig {
         text-align: center;
-        width: 150px;
-        height: 150px;
-        max-width: 150px;
+        width: 120px;
+        height: 120px;
+        max-width: 120px;
         border-radius: 50%;
         object-fit: cover;
         margin: 0 auto;
