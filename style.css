@@ -311,11 +311,25 @@ header.sticky {
     margin-bottom: 10px;
     line-height: 1.4;
 }
+.project-description strong {
+    display: inline-block;
+    width: 120px; /* Adjust the width as needed to align text */
+}
+.project-description strong + br {
+    display: none; /* Hide line breaks after strong if used */
+}
+.project-description span {
+    display: inline-block;
+    text-align: justify;
+    text-indent: -120px; /* Matches the width of the strong */
+    margin-left: 120px; /* Aligns with the text after strong */
+}
 .row-text {
     position: relative;
     overflow: hidden;
 }
 .project-description {
+    text-align: justify;
     max-height: 0;
     opacity: 0;
     transition: max-height 0.4s ease, opacity 0.4s ease;
