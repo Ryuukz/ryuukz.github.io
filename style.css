@@ -281,7 +281,8 @@ header.sticky {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: auto; /* Auto height to adapt to content size */
+    z-index: 0; /* Keep default stacking order */
 }
 .project-title {
     font-size: 22px;
@@ -303,6 +304,7 @@ header.sticky {
     flex-direction: column-reverse;
     align-items: flex-end; /* Aligns the icons to the right */
     gap: 5px;
+    z-index: 2; /* Ensure icons stay above other content */
 }
 .old-icon,
 .new-icons i {
@@ -319,6 +321,9 @@ header.sticky {
 }
 .new-icons {
     display: none;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
 }
 .row:hover .old-icon {
     opacity: 0;
@@ -346,6 +351,7 @@ header.sticky {
     visibility: visible;
     padding: 15px 20px;
     transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+    z-index: 1; /* Ensure description stays above */
 }
 .project-description .label {
     display: inline-block;
@@ -522,6 +528,32 @@ form .send-btn:hover {
     }
     .navlist.active {
         right: 0;
+    }
+}
+@media (max-width: 768px) {
+    .row {
+        padding: 15px;
+        z-index: auto; /* Allow better stacking on smaller screens */
+    }
+    .icon-area {
+        top: 5px; /* Adjust top position for smaller screens */
+        right: 5px; /* Adjust right position for smaller screens */
+    }
+    .project-description {
+        max-height: 200px; /* Allow more space for descriptions on smaller screens */
+        overflow-y: auto; /* Enable scrolling if the content overflows */
+    }
+    .project-title {
+        font-size: 20px; /* Slightly smaller for better fit */
+    }
+    .business-name {
+        font-size: 16px; /* Adjusted for smaller screens */
+    }
+    .old-icon,
+    .new-icons i {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 }
 @media(max-width:680px) {
