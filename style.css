@@ -262,19 +262,15 @@ header.sticky {
 .portfolio {
     background: var(--second-bg-color);
 }
+/* Make the boxes uniform in size */
 .Portfolio-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust columns */
+    align-items: stretch; /* Ensure all rows stretch equally */
     gap: 2.3rem;
     margin-top: 4.2rem;
 }
-.row img {
-    height: auto;
-    width: 100%;
-    border-radius: 28px;
-    margin-bottom: 1.4rem;
-}
+
 .row {
     background: #2d343f;
     border-radius: 28px;
@@ -284,18 +280,36 @@ header.sticky {
     transition: all 0.5s ease;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is evenly spaced */
+    height: 100%; /* Make sure rows stretch to fill the height */
+    min-height: 400px; /* Set a minimum height for uniformity */
 }
+
+/* Adjust image dimensions for consistency */
+.row img {
+    height: auto;
+    width: 100%;
+    border-radius: 28px;
+    margin-bottom: 1.4rem;
+    object-fit: cover;
+}
+
+/* Refine the main-row layout */
 .main-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.5rem;
 }
+
 .row h5 {
     font-size: 20px;
     font-weight: 600;
     color: var(--other-color);
 }
+
 .row i {
     display: inline-flex;
     align-items: center;
@@ -307,12 +321,15 @@ header.sticky {
     color: var(--main-color);
     backdrop-filter: brightness(88%);
 }
+
 .row h4 {
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 10px;
     line-height: 1.4;
 }
+
+/* Adjusted project description for dropdown effect */
 .project-description {
     text-align: justify;
     max-height: 0;
@@ -321,35 +338,47 @@ header.sticky {
     visibility: hidden;
     margin: 0;
     padding: 0 15px;
+    overflow: hidden;
+    flex-grow: 1; /* Allows description to grow within the row */
 }
+
+/* Show description smoothly when hovering */
 .row:hover .project-description {
-    max-height: 300px;
+    max-height: 150px; /* Adjust based on content length */
     opacity: 1;
     visibility: visible;
     padding: 15px;
     border: 1px solid var(--main-color);
-    transform: translateY(0px) scale(1);
-    cursor: default;
+    transform: translateY(0px);
 }
+
+/* Adjust the description label styling */
 .project-description .label {
     display: inline-block;
-    width: 120px;
+    width: 120px; /* Consistent label width */
     font-weight: bold;
     margin-bottom: 5px;
+    color: var(--other-color); /* Keeps color consistent with your theme */
 }
+
+/* Adjust title and business name transitions */
 .project-title,
 .business-name {
     transition: opacity 0.4s ease;
     opacity: 1;
 }
+
 .row:hover .project-title,
 .row:hover .business-name {
     opacity: 0;
 }
+
+/* Adjust text overflow behavior */
 .row-text {
     position: relative;
     overflow: hidden;
     padding-bottom: 15px;
+    flex-grow: 1; /* Ensures the text area can expand to fill available space */
 }
 .contact-form {
     display: flex;
