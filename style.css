@@ -381,39 +381,40 @@ header.sticky {
     padding: 0 15px;
     display: block;
     color: var(--other-color);
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left; /* Changed to left align for better flow */
     line-height: 1.6;
     hyphens: auto;
     word-wrap: break-word;
 }
+
 .row:hover .project-description {
     max-height: 400px;
     opacity: 1;
     visibility: visible;
     padding: 15px 20px;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left; /* Maintain left alignment */
     hyphens: auto;
     word-wrap: break-word;
 }
+
 .project-description .label {
     display: inline-block;
     min-width: 120px; /* Slightly narrower to save space */
     font-weight: bold;
     color: var(--main-color);
     margin-bottom: 5px;
-    vertical-align: top; /* Keeps labels aligned with the top of the text */
+    vertical-align: top;
     text-align: left; /* Aligns the label text to the left */
 }
+
 .project-description span {
     display: inline-block;
     width: calc(100% - 140px); /* Adjust width for better alignment */
     margin-left: 10px; /* Slight spacing between label and text */
     word-wrap: break-word;
     line-height: 1.6; /* Consistent line height for better readability */
-    text-align: justify; /* Justify the text for cleaner appearance */
+    text-align: left; /* Changed to left align for a smoother flow */
     margin-bottom: 5px; /* Adds spacing between each line */
     hyphens: auto; /* Break words for better alignment */
 }
