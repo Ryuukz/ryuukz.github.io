@@ -538,20 +538,25 @@ form .send-btn:hover {
         padding: 15px;
         z-index: auto; /* Allow better stacking on smaller screens */
     }
+
     .icon-area {
         top: 5px; /* Adjust top position for smaller screens */
         right: 5px; /* Adjust right position for smaller screens */
     }
+
     .project-description {
         max-height: 200px; /* Allow more space for descriptions on smaller screens */
         overflow-y: auto; /* Enable scrolling if the content overflows */
     }
+
     .project-title {
         font-size: 20px; /* Slightly smaller for better fit */
     }
+
     .business-name {
         font-size: 16px; /* Adjusted for smaller screens */
     }
+
     .old-icon,
     .new-icons i {
         width: 45px;
