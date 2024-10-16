@@ -262,6 +262,7 @@ header.sticky {
 .portfolio {
     background: var(--second-bg-color);
 }
+
 .Portfolio-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust columns */
@@ -269,17 +270,20 @@ header.sticky {
     gap: 2.3rem;
     margin-top: 4.2rem;
 }
+
 .row {
     background: #2d343f;
     border-radius: 28px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
     padding: 10px 20px; /* Compact padding for initial display */
-    transition: all 0.5s ease; /* Smooth transition for size change */
+    transition: all 0.4s ease; /* Smooth transition for size change */
     overflow: hidden;
     position: relative;
     display: inline-block; /* Fits content initially */
+    transition: height 0.4s ease; /* Smooth height transition */
 }
+
 .row img {
     height: auto;
     width: 100%;
@@ -287,18 +291,21 @@ header.sticky {
     margin-bottom: 1.4rem;
     object-fit: cover;
 }
+
 .main-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.5rem;
 }
+
 .row h5 {
     font-size: 20px;
     font-weight: 600;
     color: var(--other-color);
     margin: 0;
 }
+
 .row i {
     display: inline-flex;
     align-items: center;
@@ -311,35 +318,42 @@ header.sticky {
     backdrop-filter: brightness(88%);
     transition: opacity 0.4s ease; /* Smooth transition for hiding */
 }
+
 .row:hover {
     padding: 20px; /* Expand padding to fit the description */
     border: 1px solid var(--main-color); /* Ensure border is visible */
 }
+
 .row:hover i {
     opacity: 0; /* Hide the icon on hover */
     visibility: hidden;
 }
+
 .row h4 {
     font-size: 25px;
     font-weight: 700;
     margin: 5px 0;
     line-height: 1.4;
 }
+
 .project-description {
-    max-height: 0;
     opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    max-height: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease; /* Smooth fade-in and height expansion */
     visibility: hidden;
     margin: 0;
     padding: 0 15px;
+    display: block; /* Ensure the description block takes up space when visible */
 }
+
 .row:hover .project-description {
-    max-height: 300px; /* Adjust this based on content length */
+    max-height: 300px; /* Adjust based on content length */
     opacity: 1;
     visibility: visible;
     padding: 10px 15px;
     transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
+
 .project-description .label {
     display: inline-block;
     width: 120px; /* Consistent label width */
@@ -347,21 +361,25 @@ header.sticky {
     margin-bottom: 5px;
     color: var(--other-color); /* Keeps color consistent with your theme */
 }
+
 .project-title,
 .business-name {
     transition: opacity 0.4s ease;
     opacity: 1;
 }
+
 .row:hover .project-title,
 .row:hover .business-name {
     opacity: 0;
 }
+
 .row-text {
     position: relative;
     overflow: hidden;
     padding-bottom: 15px;
     flex-grow: 1; /* Ensures the text area can expand to fill available space */
 }
+
 .contact-form {
     display: flex;
     align-items: center;
