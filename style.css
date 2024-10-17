@@ -378,7 +378,7 @@ header.sticky {
     padding: 0;
     display: block;
     color: var(--other-color);
-    text-align: justify;
+    text-align: left; /* Changed from justify for better readability */
     line-height: 1.6;
     hyphens: auto;
 }
@@ -387,9 +387,9 @@ header.sticky {
     max-height: 400px;
     opacity: 1;
     visibility: visible;
-    padding: 15px 20px; /* Add padding only when the description is visible */
+    padding: 15px 20px; /* Add padding when the description is visible */
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-    text-align: justify;
+    text-align: left; /* Changed from justify for better readability */
     hyphens: auto;
 }
 
@@ -399,18 +399,18 @@ header.sticky {
     color: var(--main-color);
     margin-bottom: 5px;
     vertical-align: top;
-    text-align: justify;
+    text-align: left; /* Changed for better alignment with content */
     hyphens: auto;
 }
 
 .project-description span {
     display: inline-block;
-    width: calc(100% - 140px);
+    width: calc(100% - 120px); /* Adjusted for better alignment */
     margin-left: 0px;
     line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 5px;
-    hyphens: auto;
+    text-align: left; /* Changed from justify for better readability */
+    margin-bottom: 5px; /* Adds spacing between each line */
+    hyphens: auto; /* Allows word-breaking */
 }
 
 .contact-form {
