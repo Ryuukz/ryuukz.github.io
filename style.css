@@ -378,7 +378,7 @@ form .send-btn:hover {
     font-size: 15px;
     color: var(--other-color);
 }
-@media (max-width: 1700px) {
+@media(max-width:1700px) {
     header {
         padding: 20px 8%;
     }
@@ -392,57 +392,48 @@ form .send-btn:hover {
         padding: 18px 8%;
     }
     .logo {
-        font-size: 30px; /* Slightly increased for better readability */
+        font-size: 28px;
     }
 }
-
-@media (max-width: 1380px) {
+@media(max-width:1380px) {
     header {
-        padding: 20px 6%;
+        padding: 20px 5%;
     }
     header.sticky {
-        padding: 14px 6%;
+        padding: 14px 5%;
     }
     section {
-        padding: 80px 6% 70px;
+        padding: 90px 5% 80px;
     }
     .footer {
-        padding: 18px 6%;
+        padding: 18px 5%;
     }
     .hero {
-        height: 85vh;
+        height: 90vh;
         background-position: center;
     }
-    .logo {
-        font-size: 26px;
-    }
 }
-
-@media (max-width: 1290px) {
+@media(max-width:1290px) {
     .box {
-        padding: 30px 30px 36px;
+        padding: 40px 40px 46px;
     }
     .box img {
         width: 100%;
-        height: 80px; /* Adjusted for better scaling */
-        max-width: 80px;
+        height: 60px;
+        max-width: 60px;
     }
     .box h3 {
-        font-size: 20px;
-    }
-    .main-content h1 {
-        font-size: 3.8rem; /* Adjusted for better scaling */
+        font-size: 21px;
     }
 }
-
-@media (max-width: 1240px) {
+@media(max-width:1240px) {
     .about {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-area: 2rem;
         text-align: center;
-        padding: 3rem 5%;
     }
-    .about-img {
+    .about-img img {
+        text-align: center;
         width: 100%;
         height: 400px;
         max-width: 400px;
@@ -451,15 +442,14 @@ form .send-btn:hover {
         margin: 0 auto;
     }
     :root {
-        --h1-font: 3.5rem;
-        --h2-font: 2rem;
-        --p-font: 14px;
+        --h1-font:4rem;
+        --h2-font:2.2rem;
+        --p-font:15px;
     }
 }
-
-@media (max-width: 950px) {
+@media(max-width:950px) {
     :root {
-        --h1-font: 3rem;
+        --h1-font:3.5rem;
     }
     .social {
         margin-bottom: 20px;
@@ -470,73 +460,40 @@ form .send-btn:hover {
     .navlist {
         position: absolute;
         top: 100%;
-        right: -100%;
+        right: 0;
         width: 255px;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
         background: var(--bg-color);
-        transition: right 0.5s ease;
+        transition: all .50s ease;
+    }
+    .navlist a {
+        display: block;
+        padding: 17px;
+        font-size: 22px;
     }
     .navlist.active {
         right: 0;
     }
-    .navlist a {
-        display: block;
-        padding: 15px;
-        font-size: 20px;
+}
+@media(max-width:680px) {
+    .main-content p {
+        width: 100%;    
     }
 }
-
-@media (max-width: 680px) {
-    .main-content p {
+@media(max-width:470px) {
+    :root {
+        --h1-font:3rem;
+        --h2-font:2rem;
+    }
+    .about-img ig {
+        text-align: center;
         width: 100%;
-    }
-    .box h3 {
-        font-size: 18px;
-    }
-    .box img {
-        height: 60px;
-        max-width: 60px;
-    }
-    .about-img {
         height: 300px;
         max-width: 300px;
-    }
-}
-
-@media (max-width: 470px) {
-    :root {
-        --h1-font: 2.8rem;
-        --h2-font: 1.8rem;
-    }
-    .about-img {
-        width: 100%;
-        height: 250px;
-        max-width: 250px;
         border-radius: 50%;
         object-fit: cover;
         margin: 0 auto;
     }
-    .navlist a {
-        font-size: 18px;
-        padding: 12px;
-    }
-    .btn,
-    .h-btn {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-    .footer {
-        padding: 15px 5%;
-        text-align: center;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .social i {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
-    }
 }
-
