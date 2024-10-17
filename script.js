@@ -60,29 +60,25 @@ document.querySelectorAll('.row').forEach((row) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Create a tooltip element
     const tooltip = document.createElement('div');
     tooltip.className = 'custom-tooltip';
     document.body.appendChild(tooltip);
 
-    // Select all icons that have a data-tooltip attribute
-    const icons = document.querySelectorAll('.icon-area i[data-tooltip], .new-icons i[data-tooltip]');
+    const icons = document.querySelectorAll('.new-icons i[data-tooltip]');
 
     icons.forEach(icon => {
-        // Show the tooltip on mouse enter
+
         icon.addEventListener('mouseenter', (event) => {
             const tooltipText = event.target.getAttribute('data-tooltip');
             tooltip.textContent = tooltipText;
             tooltip.style.opacity = '1';
             tooltip.style.visibility = 'visible';
 
-            // Get the icon's position and dimensions
             const rect = event.target.getBoundingClientRect();
-            tooltip.style.left = `${rect.right + 10}px`; // Position tooltip 10px to the right of the icon
-            tooltip.style.top = `${rect.top + (rect.height / 2) - (tooltip.offsetHeight / 2)}px`; // Center vertically with the icon
+            tooltip.style.left = `${rect.right + 10}px`;
+            tooltip.style.top = `${rect.top + (rect.height / 2) - (tooltip.offsetHeight / 2)}px`;
         });
 
-        // Hide the tooltip on mouse leave
         icon.addEventListener('mouseleave', () => {
             tooltip.style.opacity = '0';
             tooltip.style.visibility = 'hidden';
