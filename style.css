@@ -316,7 +316,7 @@ header.sticky {
 }
 .business-name a {
     cursor: pointer;
-    color: var(--other-color);
+    color: var(--main-color);
     transition: all .50s ease;
 }
 .business-name a:hover {
@@ -397,6 +397,7 @@ header.sticky {
     color: var(--other-color);
     line-height: 1.6;
 }
+.row:hover,
 .row:hover .project-description {
     max-height: 400px;
     opacity: 1;
