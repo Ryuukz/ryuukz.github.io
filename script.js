@@ -58,3 +58,34 @@ document.querySelectorAll('.row').forEach((row) => {
         }, 400); // Matches the CSS transition duration (0.4s)
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Create a tooltip element
+    const tooltip = document.createElement('div');
+    tooltip.className = 'custom-tooltip';
+    document.body.appendChild(tooltip);
+
+    // Add event listeners to all icons with the data-tooltip attribute
+    const icons = document.querySelectorAll('.icon-area i[data-tooltip], .new-icons i[data-tooltip]');
+
+    icons.forEach(icon => {
+        icon.addEventListener('mouseenter', (event) => {
+            // Get the tooltip text from the data attribute
+            const tooltipText = event.target.getAttribute('data-tooltip');
+            tooltip.textContent = tooltipText;
+            tooltip.style.opacity = '1';
+            tooltip.style.visibility = 'visible';
+
+            // Position the tooltip to the right of the icon
+            const rect = event.target.getBoundingClientRect();
+            tooltip.style.left = `${rect.right + 10}px`;
+            tooltip.style.top = `${rect.top + (rect.height / 2) - (tooltip.offsetHeight / 2)}px`;
+        });
+
+        icon.addEventListener('mouseleave', () => {
+            // Hide the tooltip when mouse leaves the icon
+            tooltip.style.opacity = '0';
+            tooltip.style.visibility = 'hidden';
+        });
+    });
+});
