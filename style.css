@@ -582,4 +582,7 @@ form .send-btn:hover {
         object-fit: cover;
         margin: 0 auto;
     }
+    .about-text h2 {
+        text-align: left;
+    }
 }
