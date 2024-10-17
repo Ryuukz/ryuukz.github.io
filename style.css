@@ -221,7 +221,6 @@ header.sticky {
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
     transition: all .50s ease;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
