@@ -30,37 +30,30 @@ document.querySelectorAll('.row').forEach((row) => {
     // Store the initial height of the row
     const initialHeight = row.offsetHeight;
 
-    // Add a flag to track if the description is visible or not
-    let isDescriptionVisible = false;
+    row.addEventListener('mouseenter', () => {
+        // Show the description and calculate its full height
+        description.style.display = 'block';
+        const descriptionHeight = description.scrollHeight;
 
-    row.addEventListener('click', () => {
-        if (!isDescriptionVisible) {
-            // Show the description and calculate its full height
-            description.style.display = 'block';
-            const descriptionHeight = description.scrollHeight;
+        // Expand the row to fit the description
+        row.style.height = initialHeight + descriptionHeight + 'px';
+        description.style.maxHeight = descriptionHeight + 'px'; // Allow the description to expand
+        description.style.opacity = 1; // Fade in the description
+        icon.style.opacity = 0; // Hide the icon
+        icon.style.visibility = 'hidden'; // Ensure the icon is not visible
+    });
 
-            // Expand the row to fit the description
-            row.style.height = initialHeight + descriptionHeight + 'px';
-            description.style.maxHeight = descriptionHeight + 'px'; // Allow the description to expand
-            description.style.opacity = 1; // Fade in the description
-            icon.style.opacity = 0; // Hide the icon
-            icon.style.visibility = 'hidden'; // Ensure the icon is not visible
+    row.addEventListener('mouseleave', () => {
+        // Revert the row height to its initial state
+        description.style.maxHeight = '0'; // Collapse the description
+        description.style.opacity = 0; // Fade out the description
+        row.style.height = initialHeight + 'px';
+        icon.style.opacity = 1; // Show the icon
+        icon.style.visibility = 'visible'; // Ensure the icon is visible again
 
-            isDescriptionVisible = true;
-        } else {
-            // Hide the description and revert the row height to its initial state
-            description.style.maxHeight = '0'; // Collapse the description
-            description.style.opacity = 0; // Fade out the description
-            row.style.height = initialHeight + 'px';
-            icon.style.opacity = 1; // Show the icon
-            icon.style.visibility = 'visible'; // Ensure the icon is visible again
-
-            // Hide the description after the transition to prevent overflow
-            setTimeout(() => {
-                description.style.display = 'none';
-            }, 400); // Matches the CSS transition duration (0.4s)
-
-            isDescriptionVisible = false;
-        }
+        // Hide the description after the transition to prevent overflow
+        setTimeout(() => {
+            description.style.display = 'none';
+        }, 400); // Matches the CSS transition duration (0.4s)
     });
 });
