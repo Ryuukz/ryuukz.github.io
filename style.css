@@ -316,6 +316,7 @@ header.sticky {
 }
 .business-name a {
     cursor: pointer;
+    color: var(--other-color);
     transition: all .50s ease;
 }
 .business-name a:hover {
