@@ -423,9 +423,13 @@ header.sticky {
     text-align: center;
     gap: 20px;
 }
-.quate_img {
-    width: 30px;
-    height: 30px;
+.test_slide i {
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--main-color);
+    border-radius: 50%;
 }
 .client_img {
     width: 100px;
@@ -437,7 +441,7 @@ header.sticky {
     object-fit: contain;
 }
 .test_slide p{
-    width: 60%;
+    width: 70%;
     font-size: 1.1rem;
     font-weight: 300;
 }
