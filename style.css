@@ -296,10 +296,11 @@ header.sticky {
     justify-content: space-between;
     height: auto;
 }
-.row p{
-    line-height: 1.6;
-    text-align: justify;
-    hyphen: auto;
+.row h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+    color: var(--main-color);
 }
 .project-title {
     font-size: 22px;
@@ -309,12 +310,6 @@ header.sticky {
     padding-right: 70px;
 }
 .business-name {
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 15px;
-    color: var(--main-color);
-}
-.business-name h4 {
     font-size: 18px;
     font-weight: 500;
     margin-top: 15px;
@@ -409,6 +404,8 @@ header.sticky {
     opacity: 1;
     visibility: visible;
     padding: 15px 20px;
+    text-align: justify;
+    hyphen: auto;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 .project-description .label {
