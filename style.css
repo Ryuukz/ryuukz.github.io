@@ -229,10 +229,10 @@ header.sticky {
 }
 .box img {
     width: 100%;
-    max-height: 180px; /* Limit the height to make the box more compact */
+    height: 150px; /* Set a fixed height for uniformity */
     object-fit: cover; /* Maintain aspect ratio and crop if necessary */
-    margin-bottom: 15px;
     border-radius: 10px; /* Added rounded corners to match box style */
+    margin-bottom: 15px;
     overflow: hidden;
 }
 .box h3 {
