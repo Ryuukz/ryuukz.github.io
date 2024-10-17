@@ -171,9 +171,9 @@ header.sticky {
 }
 .about-img {
     width: 100%;
-    max-width: 250px; /* Set a max width to maintain size on larger screens */
-    height: auto;
-    aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio to keep the image circular */
+    height: 100%;
+    max-width: 530px;
+    max-height: 530px;
     border-radius: 50%;
     object-fit: cover;
     overflow: hidden;
