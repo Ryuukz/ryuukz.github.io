@@ -314,6 +314,12 @@ header.sticky {
     margin-top: 15px;
     color: var(--main-color);
 }
+.business-name h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+    color: var(--main-color);
+}
 .business-name a {
     cursor: pointer;
     color: var(--main-color);
