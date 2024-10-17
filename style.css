@@ -378,9 +378,7 @@ header.sticky {
     padding: 0;
     display: block;
     color: var(--other-color);
-    text-align: left; /* Changed from justify for better readability */
     line-height: 1.6;
-    hyphens: auto;
 }
 
 .row:hover .project-description {
@@ -389,8 +387,6 @@ header.sticky {
     visibility: visible;
     padding: 15px 20px; /* Add padding when the description is visible */
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-    text-align: left; /* Changed from justify for better readability */
-    hyphens: auto;
 }
 
 .project-description .label {
@@ -399,7 +395,7 @@ header.sticky {
     color: var(--main-color);
     margin-bottom: 5px;
     vertical-align: top;
-    text-align: left; /* Changed for better alignment with content */
+    text-align: justify; /* Changed for better alignment with content */
     hyphens: auto;
 }
 
