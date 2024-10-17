@@ -13,7 +13,6 @@
     --second-bg-color: #2a313b;
     --main-color: #17a2b8;
     --other-color: #a8b2bd;
-
     --h1-font: 4.5rem;
     --h2-font: 2.9rem;
     --p-font: 1rem;
@@ -88,7 +87,7 @@ span {
     transform: scale(1.1);
 }
 section {
-    padding: 110px 16% 90px;
+    padding: 110px 16% 110px;
 }
 .hero {
     height: 100vh;
@@ -249,25 +248,6 @@ header.sticky {
     margin-bottom: 10px;
     text-align: center;
 }
-.box a {
-    display: inline-block;
-    font-size: 16px;
-    line-height: 1.2em;
-    font-weight: 700;
-    padding: 5px 0;
-    color: var(--text-color);
-    border-bottom: 2px solid #5d6c83;
-    transition: all 0.5s ease;
-}
-.box i {
-    vertical-align: middle;
-    font-size: 20px;
-    color: var(--main-color);
-    margin-left: 5px;
-}
-.box a:hover {
-    border-bottom: 2px solid var(--main-color);
-}
 .box:hover {
     border: 1px solid var(--main-color);
     transform: translateY(-3px) scale(1.01);
@@ -275,7 +255,7 @@ header.sticky {
 .portfolio {
     background: var(--second-bg-color);
 }
-.Portfolio-content {
+.portfolio-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     align-items: stretch;
@@ -296,12 +276,6 @@ header.sticky {
     justify-content: space-between;
     height: auto;
 }
-.row h4 {
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 15px;
-    color: var(--main-color);
-}
 .project-title {
     font-size: 22px;
     font-weight: 700;
@@ -317,7 +291,6 @@ header.sticky {
 }
 .business-name a {
     cursor: pointer;
-    color: var(--main-color);
     transition: all .50s ease;
 }
 .business-name a:hover {
@@ -334,6 +307,13 @@ header.sticky {
     gap: 5px;
     z-index: 2;
 }
+.new-icons {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    z-index: 2;
+}
 .old-icon,
 .new-icons i {
     width: 40px;
@@ -346,16 +326,62 @@ header.sticky {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px transparent;
-    transition: opacity 0.5s ease;
+    transition: opacity .50s ease;
 }
-.new-icons {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
-    z-index: 2;
+.row:hover .old-icon {
+    opacity: 0;
+    visibility: hidden;
 }
-.custom-tooltip {
+.row:hover .new-icons {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .50s ease-in-out;
+    cursor: pointer;
+}
+.row:hover .new-icons i:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--main-color);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.justify-text {
+    text-align: justify;
+    hyphen: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+.project-description {
+    opacity: 0;
+    max-height: 0;
+    transition: max-height .50s ease-in-out, opacity 0.50s ease-in-out;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    display: block;
+    color: var(--other-color);
+}
+.row:hover,
+.row:hover .project-description {
+    opacity: 1;
+    visibility: visible;
+    padding: 15px 20px;
+    transition: max-height .50s ease-in-out, opacity .50s ease-in-out, padding 0.50s ease-in-out;
+}
+.project-description .label {
+    display: inline-block;
+    font-weight: bold;
+    color: var(--main-color);
+    vertical-align: top;
+}
+.project-description span {
+    display: inline-block;
+    width: calc(100% - 120px);
+    margin-left: 0px;
+}
+.tooltip {
     position: absolute;
     background: var(--bg-color);
     color: var(--text-color);
@@ -368,61 +394,17 @@ header.sticky {
     font-size: 12px;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
 }
-.row:hover .old-icon {
-    opacity: 0;
-    visibility: hidden;
-}
-.row:hover .new-icons {
-    display: flex;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease-in-out;
-    cursor: pointer;
-}
-.row:hover .new-icons i:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
-    box-shadow: 0 0 20px var(--main-color);
-    transform: scale(1.1);
-    cursor: pointer;
-}
-.project-description {
-    opacity: 0;
-    max-height: 0;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    visibility: hidden;
-    margin: 0;
-    padding: 0;
-    display: block;
-    color: var(--other-color);
-    line-height: 1.6;
-}
-.row:hover,
-.row:hover .project-description {
-    max-height: 400px;
-    opacity: 1;
-    visibility: visible;
-    padding: 15px 20px;
-    text-align: justify;
-    hyphen: auto;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-}
-.project-description .label {
-    display: inline-block;
-    font-weight: bold;
-    color: var(--main-color);
-    margin-bottom: 5px;
-    vertical-align: top;
-    text-align: justify;
-}
-.project-description span {
-    display: inline-block;
-    width: calc(100% - 120px);
-    margin-left: 0px;
-    line-height: 1.6;
-    text-align: left;
-    margin-bottom: 5px;
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--bg-color) transparent transparent transparent;
 }
 .testimonials {
     flex-direction: column;
@@ -524,6 +506,8 @@ header.sticky {
         width: 100%;
         height: 60px;
         max-width: 60px;
+        object-fit: cover;
+        overflow: hidden;
     }
     .box h3 {
         font-size: 21px;
@@ -536,7 +520,7 @@ header.sticky {
         text-align: center;
     }
     .about-img img {
-        text-align: center;
+        text-align: left;
         width: 100%;
         height: 400px;
         max-width: 400px;
@@ -573,8 +557,8 @@ header.sticky {
     }
     .navlist a {
         display: block;
-        padding: 17px;
-        font-size: 22px;
+        padding: 10px;
+        font-size: 16px;
     }
     .navlist.active {
         right: 0;
