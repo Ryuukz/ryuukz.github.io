@@ -57,16 +57,3 @@ document.querySelectorAll('.row').forEach((row) => {
         }, 400); // Matches the CSS transition duration (0.4s)
     });
 });
-
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        window.scrollTo({
-            top: targetElement.offsetTop - 80, // Adjust 80 to your header height
-            behavior: 'smooth'
-        });
-    });
-});
