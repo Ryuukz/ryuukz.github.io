@@ -275,7 +275,6 @@ header.sticky {
 .portfolio {
     background: var(--second-bg-color);
 }
-
 .Portfolio-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -283,7 +282,6 @@ header.sticky {
     gap: 2.3rem;
     margin-top: 4.2rem;
 }
-
 .row {
     background: #2d343f;
     border-radius: 28px;
@@ -298,7 +296,6 @@ header.sticky {
     justify-content: space-between;
     height: auto;
 }
-
 .project-title {
     font-size: 22px;
     font-weight: 700;
@@ -306,14 +303,12 @@ header.sticky {
     margin: 0 0 10px 0;
     padding-right: 70px; /* Ensure space for the icon area */
 }
-
 .business-name {
     font-size: 18px;
     font-weight: 500;
     margin-top: 15px;
     color: var(--main-color);
 }
-
 .icon-area {
     position: absolute;
     top: 10px;
@@ -324,7 +319,6 @@ header.sticky {
     gap: 5px;
     z-index: 2;
 }
-
 .old-icon,
 .new-icons i {
     width: 40px;
@@ -339,7 +333,6 @@ header.sticky {
     box-shadow: 0 0 20px transparent;
     transition: opacity 0.5s ease;
 }
-
 .new-icons {
     display: none;
     flex-direction: column;
