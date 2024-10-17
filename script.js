@@ -86,8 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-var swiper = new Swiper('.testSwiper',{
-    slidesPerView:1,
-    loop:true,
-    autoplay:true,
-})
+var swiper = new Swiper('.testSwiper', {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+    },
+    speed: 800,
+});
