@@ -384,15 +384,7 @@ header.sticky {
 }
 .project-description p {
     color: var(--text-color);
-    font-weight: 600;
-    font-size: 19px;
-    line-height: 42px;
-}
-.project-description p span {
-    color: var(--other-color);
-    font-size: var(--p-font);
-    font-weight: 400;
-    margin-left: 8px;
+    line-height: 16px;
 }
 .tooltip {
     position: absolute;
