@@ -256,14 +256,10 @@ header.sticky {
     background: var(--second-bg-color);
 }
 .portfolio-content {
-    display: flex;
-    gap: 20px;
-    padding: 20px; 
-    overflow-x: scroll; 
-    scroll-snap-type: x mandatory; 
-    scroll-padding: 10px;
-    width: calc(3 * 350px + 2 * 20px);
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: stretch;
+    gap: 2.3rem;
     margin-top: 4.2rem;
 }
 .row {
@@ -278,9 +274,7 @@ header.sticky {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 350px;
-    flex-shrink: 0;
-    scroll-snap-align: center;
+    height: auto;
 }
 .project-title {
     font-size: 22px;
