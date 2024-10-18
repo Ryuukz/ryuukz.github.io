@@ -320,7 +320,6 @@ header.sticky {
 }
 .project-description .label {
     display: inline-block;
-    font-weight: bold;
     vertical-align: top;
 }
 .justify-text .label{
