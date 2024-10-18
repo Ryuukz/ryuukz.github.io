@@ -291,7 +291,6 @@ header.sticky {
 }
 .justify-text {
     text-align: justify;
-    hyphen: auto;
     word-wrap: break-word;
     overflow-wrap: break-word;
     line-height: 1.4em;
@@ -364,10 +363,6 @@ header.sticky {
     visibility: visible;
     opacity: 1;
     transition: none;
-}
-.row:hover i {
-    visibility: visible;
-    opacity: 1;
 }
 .row:hover .old-icon {
     opacity: 0;
@@ -523,7 +518,7 @@ header.sticky {
         width: 100%;
         height: 60px;
         max-width: 60px;
-        object-fit: cover;
+        object-fit: contain;
         overflow: hidden;
     }
     .box h3 {
@@ -537,7 +532,6 @@ header.sticky {
         text-align: center;
     }
     .about-img img {
-        text-align: lenter;
         width: 100%;
         height: 400px;
         max-width: 400px;
@@ -579,22 +573,19 @@ header.sticky {
     }
     .navlist.active {
         right: 0;
-        display: flex;
-        flex-direction: column;
     }
 }
 @media(max-width:680px) {
     .main-content p {
         width: 100%;    
     }
-}
-@media(max-width:470px) {
     :root {
         --h1-font:3rem;
         --h2-font:2rem;
     }
+}
+@media(max-width:470px) {
     .about-img img {
-        text-align: center;
         width: 100%;
         height: 300px;
         max-width: 300px;
