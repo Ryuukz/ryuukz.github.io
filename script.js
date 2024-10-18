@@ -1,11 +1,12 @@
+// Sticky Header //
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 120);
 });
-
+// Menu Button //
 let menu = document.querySelector("#menu-icon");
-let navlist = document.querySelector('navlist');
+let navlist = document.querySelector('.navlist');
 
 menu.onclick = () => {
     menu.classList.toggle('bx-x');
