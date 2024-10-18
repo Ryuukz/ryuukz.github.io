@@ -14,8 +14,10 @@ menu.onclick = () => {
 };
 
 window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    navlist.classList.remove('active');
+    if (!menu.classList.contains('bx-x')) {
+        menu.classList.remove('bx-x');
+        navlist.classList.remove('active');
+    }
 };
 
 var typed = new Typed('#text', {
