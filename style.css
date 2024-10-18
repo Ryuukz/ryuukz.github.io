@@ -398,7 +398,7 @@ header.sticky {
     font-size: 12px;
     color: var(--text-color);
     padding: 2px 5px;
-    z-index: 9999
+    z-index: 9999;
 }
 .testimonials {
     flex-direction: column;
