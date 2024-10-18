@@ -478,7 +478,7 @@ header.sticky {
     font-weight: 400;
     color: var(--other-color);
 }
-/*@media(max-width:1700px) {
+@media(max-width:1700px) {
     header {
         padding: 20px 8%;
     }
@@ -600,4 +600,4 @@ header.sticky {
         object-fit: cover;
         margin: 0 auto;
     }
-}*/
+}
