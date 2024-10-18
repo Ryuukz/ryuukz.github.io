@@ -369,7 +369,7 @@ header.sticky {
     transition: opacity .50s ease-in-out;
     cursor: pointer;
 }
-.business-name i:hover {
+.row:hover .business-name i:hover {
     color: var(--main-color);
     text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
     cursor: pointer;
@@ -387,7 +387,7 @@ header.sticky {
     padding: 15px 20px;
     transition: max-height .50s ease-in-out, opacity .50s ease-in-out, padding 0.50s ease-in-out;
 }
-.tooltip {
+/*.tooltip {
     position: absolute;
     background: var(--bg-color);
     color: var(--text-color);
@@ -411,7 +411,7 @@ header.sticky {
     border-width: 5px;
     border-style: solid;
     border-color: var(--bg-color) transparent transparent transparent;
-}
+}*/
 .testimonials {
     flex-direction: column;
     background-color: var(--bg-color);
