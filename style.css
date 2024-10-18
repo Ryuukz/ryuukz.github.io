@@ -290,12 +290,45 @@ header.sticky {
     color: var(--main-color);
 }
 .business-name a {
+    color: var(--main-color);
     cursor: pointer;
     transition: all .50s ease;
 }
 .business-name a:hover {
     color: var(--main-color);
     text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
+}
+.row:hover {
+    cursor: pointer;
+}
+.justify-text {
+    text-align: justify;
+    hyphen: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+.project-description {
+    opacity: 0;
+    max-height: 0;
+    transition: max-height .50s ease-in-out, opacity 0.50s ease-in-out;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 5px;
+}
+.project-description .label {
+    display: inline-block;
+    font-weight: bold;
+    vertical-align: top;
+}
+.justify-text .label{
+    display: inline-block;
+}
+.project-description p {
+    color: var(--text-color);
+    line-height: 16px;
 }
 .icon-area {
     position: absolute;
@@ -346,45 +379,11 @@ header.sticky {
     transform: scale(1.1);
     cursor: pointer;
 }
-.justify-text {
-    text-align: justify;
-    hyphen: auto;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    line-height: 1.6;
-}
-.project-description {
-    opacity: 0;
-    max-height: 0;
-    transition: max-height .50s ease-in-out, opacity 0.50s ease-in-out;
-    visibility: hidden;
-    margin: 0;
-    padding: 0;
-    display: block;
-    color: var(--other-color);
-}
-.row:hover,
 .row:hover .project-description {
     opacity: 1;
     visibility: visible;
     padding: 15px 20px;
     transition: max-height .50s ease-in-out, opacity .50s ease-in-out, padding 0.50s ease-in-out;
-}
-.project-description .label {
-    display: inline-block;
-    font-weight: bold;
-    color: var(--main-color);
-    vertical-align: top;
-}
-.justify-text .label{
-    display: inline-block;
-}
-.project-description {
-    margin-bottom: 5px;
-}
-.project-description p {
-    color: var(--text-color);
-    line-height: 16px;
 }
 .tooltip {
     position: absolute;
