@@ -376,8 +376,8 @@ header.sticky {
     color: var(--main-color);
     vertical-align: top;
 }
-.justify-text .project-description{
-    color: var(--other-color)
+.justify-text .label{
+    display: inline-block;
 }
 .project-description span {
     display: inline-block;
