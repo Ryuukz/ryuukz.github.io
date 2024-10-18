@@ -379,10 +379,20 @@ header.sticky {
 .justify-text .label{
     display: inline-block;
 }
-.project-description span {
-    display: inline-block;
-    width: calc(100% - 120px);
-    margin-left: 0px;
+.project-description {
+    margin-bottom: 5px;
+}
+.project-description p {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 42px;
+}
+.project-description p span {
+    color: var(--other-color);
+    font-size: var(--p-font);
+    font-weight: 400;
+    margin-left: 8px;
 }
 .tooltip {
     position: absolute;
