@@ -256,10 +256,14 @@ header.sticky {
     background: var(--second-bg-color);
 }
 .portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    align-items: stretch;
-    gap: 2.3rem;
+    display: flex;
+    gap: 20px;
+    padding: 20px; 
+    overflow-x: scroll; 
+    scroll-snap-type: x mandatory; 
+    scroll-padding: 10px;
+    width: calc(3 * 350px + 2 * 20px);
+    margin: 0 auto;
     margin-top: 4.2rem;
 }
 .row {
@@ -274,7 +278,9 @@ header.sticky {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
+    width: 350px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
 }
 .project-title {
     font-size: 22px;
@@ -578,10 +584,16 @@ header.sticky {
         display: flex;
         flex-direction: column;
     }
+    .portfolio-content {
+        width: calc(2 * 350px + 1 * 20px);
+    }
 }
 @media(max-width:680px) {
     .main-content p {
         width: 100%;    
+    }
+    .portfolio-content {
+        width: 350px;
     }
 }
 @media(max-width:470px) {
