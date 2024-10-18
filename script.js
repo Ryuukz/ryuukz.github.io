@@ -27,20 +27,17 @@ var typed = new Typed('#text', {
     loop: true,
 });
 // Auto-height //
-// Toggle visibility on click
 document.querySelectorAll('.row').forEach((row) => {
     const description = row.querySelector('.project-description');
     const icon = row.querySelector('i');
 
-    // Store the initial height of the row
     const initialHeight = row.offsetHeight;
-
-    // Variable to keep track of toggle state
     let isOpen = false;
 
     row.addEventListener('click', () => {
         if (!isOpen) {
-            // Show the description
+            // Add the 'active' class to show icons and description
+            row.classList.add('active');
             description.style.display = 'block';
             const descriptionHeight = description.scrollHeight;
 
@@ -52,7 +49,8 @@ document.querySelectorAll('.row').forEach((row) => {
 
             isOpen = true;  // Mark as open
         } else {
-            // Hide the description
+            // Remove the 'active' class to hide icons and description
+            row.classList.remove('active');
             description.style.maxHeight = '0';
             description.style.opacity = 0;
             row.style.height = initialHeight + 'px';
@@ -61,7 +59,7 @@ document.querySelectorAll('.row').forEach((row) => {
 
             setTimeout(() => {
                 description.style.display = 'none';
-            }, 400);  // Matches the CSS transition duration (0.4s)
+            }, 400);  // Matches the CSS transition duration
 
             isOpen = false;  // Mark as closed
         }
