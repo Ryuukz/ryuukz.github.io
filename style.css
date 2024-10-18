@@ -299,6 +299,16 @@ header.sticky {
 .justify-text .label{
     display: inline-block;
 }
+.icon-area {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 5px;
+    z-index: 2;
+}
 .old-icon {
     opacity: 1;
     visibility: visible;
@@ -308,12 +318,25 @@ header.sticky {
     display: none;
     opacity: 0;
     visibility: hidden;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    z-index: 2;
     transition: opacity .50s ease-in-out, visibility .50s ease-in-out;
 }
+.old-icon,
 .new-icons i {
-    background: transparent;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
     color: var(--main-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px transparent;
+    transition: opacity .50s ease;
 }
 .new-icons i:hover {
     background: var(--main-color);
@@ -324,10 +347,13 @@ header.sticky {
 }
 .project-description {
     opacity: 0;
-    visibility: hidden;
     max-height: 0;
+    transition: max-height .50s ease-in-out, opacity 0.50s ease-in-out;
+    visibility: hidden;
+    margin: 0;
     padding: 0;
-    transition: max-height .50s ease-in-out, opacity .50s ease-in-out, padding 0.50s ease-in-out;
+    display: block;
+    color: var(--other-color);
 }
 .row.active .old-icon {
     opacity: 0;
@@ -337,17 +363,21 @@ header.sticky {
     display: flex;
     opacity: 1;
     visibility: visible;
+    transition: opacity .50s ease-in-out;
+    cursor: pointer;
 }
 .row.active .project-description {
     opacity: 1;
     visibility: visible;
-    max-height: 100%; /* Ensure description expands fully */
+    display: inline-block;
+    vertical-align: top;
     padding: 15px 20px;
+    transition: max-height .50s ease-in-out, opacity .50s ease-in-out, padding 0.50s ease-in-out;
 }
 .aria-label {
-    font-size: 12px; /* Reduce the font size */
-    background: transparent; /* Make background transparent */
-    z-index: 9999; /* Make sure aria label stays on top */
+    font-size: 12px;
+    background: transparent;
+    z-index: 9999;
 }
 .aria-label-span {
     z-index: 10001;
