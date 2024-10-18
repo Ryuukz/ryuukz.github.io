@@ -59,41 +59,35 @@ document.querySelectorAll('.row').forEach((row) => {
     });
 });
 // Aria-label //
-// Find all elements with an aria-label attribute
 const ariaElements = document.querySelectorAll('[aria-label]');
 
-// Loop through each element and create a hidden span for the aria-label
 ariaElements.forEach(el => {
-    // Create a span element specifically for aria-label
+
     const labelSpan = document.createElement('span');
     labelSpan.textContent = el.getAttribute('aria-label');
-    labelSpan.classList.add('aria-label-span');  // Add a specific class for styling
+    labelSpan.classList.add('aria-label-span');
 
-    // Apply the default hidden styles
     labelSpan.style.color = 'var(--text-color)';
-    labelSpan.style.backgroundColor = 'transparent';  // Transparent background
-    labelSpan.style.fontSize = '12px';  // Smaller font size
+    labelSpan.style.backgroundColor = 'transparent';
+    labelSpan.style.fontSize = '12px';
     labelSpan.style.padding = '5px';
     labelSpan.style.borderRadius = '4px';
     labelSpan.style.position = 'absolute';
     labelSpan.style.marginTop = '5px';
-    labelSpan.style.zIndex = '9999';  // Ensure the tooltip stays on top
-    labelSpan.style.whiteSpace = 'nowrap'; // Prevent label from wrapping
-    labelSpan.style.visibility = 'hidden'; // Initially hidden
-    labelSpan.style.opacity = '0'; // Fully transparent
-    labelSpan.style.transition = 'visibility 0s, opacity 0.2s ease-in-out'; // Smooth transition
+    labelSpan.style.zIndex = '9999';
+    labelSpan.style.whiteSpace = 'nowrap';
+    labelSpan.style.visibility = 'hidden';
+    labelSpan.style.opacity = '0';
+    labelSpan.style.transition = 'visibility 0s, opacity 0.2s ease-in-out';
 
-    // Append the label span to the element
-    el.style.position = 'relative';  // Ensure the element has positioning
-    el.appendChild(labelSpan);  // Add the aria-label to the DOM
+    el.style.position = 'relative';
+    el.appendChild(labelSpan);
 
-    // Show the label when the icon is hovered
     el.addEventListener('mouseenter', () => {
         labelSpan.style.visibility = 'visible';
         labelSpan.style.opacity = '1';
     });
 
-    // Hide the label when the hover ends
     el.addEventListener('mouseleave', () => {
         labelSpan.style.visibility = 'hidden';
         labelSpan.style.opacity = '0';
