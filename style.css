@@ -394,7 +394,7 @@ header.sticky {
     transition: max-height .50s ease-in-out, opacity .50s ease-in-out, padding 0.50s ease-in-out;
 }
 .aria-label-span {
-    z-index: 9999;
+    z-index: 10001;
     background-color: transparent;
     font-size: 12px;
     color: var(--text-color);
