@@ -263,6 +263,7 @@ header.sticky {
     margin-top: 4.2rem;
 }
 .row {
+    z-index: 1;
     background: #2d343f;
     border-radius: 28px;
     border: 1px solid transparent;
@@ -404,6 +405,10 @@ header.sticky {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.2s ease-in-out;
+}
+.row:hover .aria-label-span {
+    visibility: visible;
+    opacity: 1;
 }
 .testimonials {
     flex-direction: column;
