@@ -27,35 +27,44 @@ var typed = new Typed('#text', {
     loop: true,
 });
 // Auto-height //
+// Toggle visibility on click
 document.querySelectorAll('.row').forEach((row) => {
     const description = row.querySelector('.project-description');
     const icon = row.querySelector('i');
 
+    // Store the initial height of the row
     const initialHeight = row.offsetHeight;
 
-    row.addEventListener('mouseenter', () => {
+    // Variable to keep track of toggle state
+    let isOpen = false;
 
-        description.style.display = 'block';
-        const descriptionHeight = description.scrollHeight;
+    row.addEventListener('click', () => {
+        if (!isOpen) {
+            // Show the description
+            description.style.display = 'block';
+            const descriptionHeight = description.scrollHeight;
 
-        row.style.height = initialHeight + descriptionHeight + 'px';
-        description.style.maxHeight = descriptionHeight + 'px';
-        description.style.opacity = 1;
-        icon.style.opacity = 0;
-        icon.style.visibility = 'hidden';
-    });
+            row.style.height = initialHeight + descriptionHeight + 'px';
+            description.style.maxHeight = descriptionHeight + 'px';
+            description.style.opacity = 1;
+            icon.style.opacity = 0;
+            icon.style.visibility = 'hidden';
 
-    row.addEventListener('mouseleave', () => {
+            isOpen = true;  // Mark as open
+        } else {
+            // Hide the description
+            description.style.maxHeight = '0';
+            description.style.opacity = 0;
+            row.style.height = initialHeight + 'px';
+            icon.style.opacity = 1;
+            icon.style.visibility = 'visible';
 
-        description.style.maxHeight = '0';
-        description.style.opacity = 0;
-        row.style.height = initialHeight + 'px';
-        icon.style.opacity = 1;
-        icon.style.visibility = 'visible';
+            setTimeout(() => {
+                description.style.display = 'none';
+            }, 400);  // Matches the CSS transition duration (0.4s)
 
-        setTimeout(() => {
-            description.style.display = 'none';
-        }, 400);
+            isOpen = false;  // Mark as closed
+        }
     });
 });
 // Aria-label //
