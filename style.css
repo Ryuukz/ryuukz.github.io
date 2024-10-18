@@ -393,31 +393,12 @@ header.sticky {
     padding: 15px 20px;
     transition: max-height .50s ease-in-out, opacity .50s ease-in-out, padding 0.50s ease-in-out;
 }
-/*.tooltip {
-    position: absolute;
-    background: var(--bg-color);
-    color: var(--text-color);
-    padding: 6px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-    font-size: 12px;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
+[aria-label] span {
+    background-color: transparent !important; /* Force transparency */
+    font-size: 12px; /* Smaller font size */
+    color: var(--text-color); /* Ensure text color matches the theme */
+    padding: 2px 5px; /* Optional: Smaller padding for better fit */
 }
-.tooltip::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: var(--bg-color) transparent transparent transparent;
-}*/
 .testimonials {
     flex-direction: column;
     background-color: var(--bg-color);
