@@ -358,6 +358,15 @@ header.sticky {
     box-shadow: 0 0 20px transparent;
     transition: opacity .50s ease;
 }
+.row i {
+    visibility: visible;
+    opacity: 1;
+    transition: none;
+}
+.row:hover i {
+    visibility: visible;
+    opacity: 1;
+}
 .row:hover .old-icon {
     opacity: 0;
     visibility: hidden;
