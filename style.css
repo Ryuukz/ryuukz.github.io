@@ -378,10 +378,8 @@ header.sticky {
 .aria-label {
     font-size: 12px;
     background: transparent;
-    z-index: 9999;
 }
 .aria-label-span {
-    z-index: 9999;
     background-color: transparent;
     font-size: 12px;
     color: var(--text-color);
