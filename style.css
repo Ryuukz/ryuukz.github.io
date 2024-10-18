@@ -87,7 +87,7 @@ span {
     transform: scale(1.1);
 }
 section {
-    padding: 110px 16% 110px;
+    padding: 110px 16% 90px;
 }
 .hero {
     height: 100vh;
@@ -375,6 +375,9 @@ header.sticky {
     font-weight: bold;
     color: var(--main-color);
     vertical-align: top;
+}
+.justify-text .project-description{
+    color: var(--other-color)
 }
 .project-description span {
     display: inline-block;
