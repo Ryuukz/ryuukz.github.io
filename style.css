@@ -385,8 +385,6 @@ header.sticky {
     color: var(--text-color);
     padding: 5px;
     border-radius: 4px;
-    bottom: -30px;
-    left: 0;
     position: absolute;
     visibility: hidden;
     opacity: 0;
