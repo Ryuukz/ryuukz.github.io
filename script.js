@@ -27,7 +27,7 @@ var typed = new Typed('#text', {
 // Auto-height on hover //
 document.querySelectorAll('.row').forEach((row) => {
     const description = row.querySelector('.project-description');
-    const icon = row.querySelector('i');
+    const icon = row.querySelector('#old-icon');
 
     const initialHeight = row.offsetHeight;
 
