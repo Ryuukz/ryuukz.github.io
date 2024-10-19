@@ -26,44 +26,38 @@ var typed = new Typed('#text', {
     backSpeed: 100,
     loop: true,
 });
-// Auto-height //
 // Auto-height on hover //
 document.querySelectorAll('.row').forEach((row) => {
     const description = row.querySelector('.project-description');
     const icon = row.querySelector('i');
 
-    // Store the initial height of the row
     const initialHeight = row.offsetHeight;
 
-    // Hover functionality
     row.addEventListener('mouseenter', () => {
-        // Show the description and calculate its full height
+
         description.style.display = 'block';
         const descriptionHeight = description.scrollHeight;
 
-        // Expand the row to fit the description
         row.style.height = initialHeight + descriptionHeight + 'px';
-        description.style.maxHeight = descriptionHeight + 'px'; // Allow the description to expand
-        description.style.opacity = 1; // Fade in the description
-        icon.style.opacity = 0; // Hide the icon
-        icon.style.visibility = 'hidden'; // Ensure the icon is not visible
+        description.style.maxHeight = descriptionHeight + 'px';
+        description.style.opacity = 1;
+        icon.style.opacity = 0;
+        icon.style.visibility = 'hidden';
     });
 
     row.addEventListener('mouseleave', () => {
-        // Revert the row height to its initial state
-        description.style.maxHeight = '0'; // Collapse the description
-        description.style.opacity = 0; // Fade out the description
+       
+        description.style.maxHeight = '0';
+        description.style.opacity = 0;
         row.style.height = initialHeight + 'px';
-        icon.style.opacity = 1; // Show the icon
-        icon.style.visibility = 'visible'; // Ensure the icon is visible again
+        icon.style.opacity = 1;
+        icon.style.visibility = 'visible';
 
-        // Hide the description after the transition to prevent overflow
         setTimeout(() => {
             description.style.display = 'none';
-        }, 400); // Matches the CSS transition duration (0.4s)
+        }, 400);
     });
 });
-
 // Aria-label //
 const ariaElements = document.querySelectorAll('[aria-label]');
 
