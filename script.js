@@ -8,12 +8,12 @@ window.addEventListener("scroll", function() {
 let menu = document.querySelector("#menu-icon");
 let navlist = document.querySelector('.navlist');
 
-menu.addEventListener('click', () => {
+menu.addEventListener("click", () => {
     menu.classList.toggle('bx-x');
     navlist.classList.toggle('active');
 };
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
         menu.classList.remove('bx-x');
         navlist.classList.remove('active');
 };
