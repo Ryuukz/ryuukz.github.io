@@ -549,7 +549,7 @@ header.sticky {
         right: 0;
         width: 200px;
         min-height: 100vh;
-        display: flex;
+        display: none;
         flex-direction: column;
         background: var(--bg-color);
         transition: all .50s ease;
@@ -561,6 +561,7 @@ header.sticky {
     }
     .navlist.active {
         right: 0;
+        display: block;
     }
 }
 @media(max-width:680px) {
