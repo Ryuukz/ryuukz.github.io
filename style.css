@@ -561,7 +561,6 @@ header.sticky {
     }
     .navlist.active {
         right: 0;
-        display: none;
     }
 }
 @media(max-width:680px) {
