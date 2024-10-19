@@ -269,7 +269,6 @@ header.sticky {
     box-shadow: 0 0 5px var(--main-color);
     padding: 10px 20px;
     transition: all 0.3s ease-in-out;
-    overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
