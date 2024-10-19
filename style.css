@@ -331,7 +331,7 @@ header.sticky {
     position: absolute;
     top: 10px;
     right: 10px;
-    display: flex !important;
+    display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
     gap: 5px;
@@ -352,7 +352,7 @@ header.sticky {
     color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 50%;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px transparent;
