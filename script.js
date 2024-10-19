@@ -14,8 +14,8 @@ menu.addEventListener("click", () => {
 };
 
 window.addEventListener("scroll", () => {
-        menu.classList.remove('bx-x');
-        navlist.classList.remove('active');
+    menu.classList.remove('bx-x');
+    navlist.classList.remove('active');
 };
 // Typed-text //
 var typed = new Typed('#text', {
